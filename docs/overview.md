@@ -6,10 +6,10 @@ cf site buildout generics
 
 ### Infra front
 - [192.168.1.1](http://192.168.1.1) SOHO router PUBLIC-IP: 24.149.26.202 (has inbound blocks)
-- [192.168.1.2](http://192.168.1.2) FreeNAS 
-- [192.168.1.3](http://192.168.1.3) GitLAB
-- [192.168.1.4](http://192.168.1.4) nginx (was tobe the inbound web proxy)
-- [192.168.1.9](http://192.168.1.9) HPE BladeSystem Onboard Admin (use firefox)
+- [192.168.1.2](http://192.168.1.2) FreeNAS root-what#time
+- [192.168.1.3](http://192.168.1.3) GitLAB root-what#time
+- [192.168.1.4](http://192.168.1.4) nginx (was tobe the inbound web proxy config through freenas)
+- [192.168.1.9](http://192.168.1.9) HPE BladeSystem Onboard Admin (use firefox) admin-what#time
 
 ### Infra DHCP
 - 192.168.1.20-199 DHCP via 192.168.1.1
@@ -20,7 +20,7 @@ cf site buildout generics
 - [192.168.1.142](http://192.168.1.142) Plex (DHCP)
 
 ### Infra back
-- [192.168.1.201:8009](http://192.168.1.201:8009) ProxMox cf  (master node)
+- [192.168.1.201:8009](http://192.168.1.201:8009) ProxMox cf  (master node) root-what#time
 - [192.168.1.202:8009](http://192.168.1.202:8009) ProxMox cf2 (cluster node)
 
 ## Reference docs
