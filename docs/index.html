@@ -20,7 +20,7 @@
         testmd.innerHTML = converter.makeHtml(mdtext, 'Gruber'); 
       }
       // https://www.markdownguide.org/cheat-sheet/
-      fetch("http://cf.2cld.net/docs/overview.md")
+      fetch("overview.md")
             .then( response => response.text() )
             .then( text => new Checkmd($("mdfile"), text) );
     </script>
