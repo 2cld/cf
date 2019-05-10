@@ -20,9 +20,22 @@ cf site buildout generics
 - [192.168.1.142](http://192.168.1.142) Plex (DHCP)
 
 ### Infra back
-- [192.168.1.201:8009](http://192.168.1.201:8009) ProxMox cf  (master node) root-What#Time
-- [192.168.1.202:8009](http://192.168.1.202:8009) ProxMox cf2 (cluster node)
+- [192.168.1.200](192.168.1.200) Win2016 - HyperV  Administrator-Color#What!
+- [192.168.1.221:8009](https://192.168.1.221:8009) ProxMox pm1  (master node) root-Color#What!
+- [192.168.1.222:8009](https://192.168.1.222:8009) ProxMox pm2 (cluster node)
 
+## FreeBSD Gateway Router
+- Look at the routes: netstat -rn
+- Delete the bad: route del default
+- Add default route: route add default 192.168.1.1
+- Add default route: vi /etc/rc.conf: defaultrouter="192.168.1.1"
+- Enable NAT: vi /etc/rc.conf: gateway_enable="YES"
+- Restart networking: /etc/rc.d/netif restart && /etc/rc.d/routing restart
+
+## FreeNAS tweak of FreeBSD setup
+- Go to [192.168.1.2](http://192.168.1.2) FreeNAS
+- System -> Tunables -> Add -> Variable: gateway_enable | Value: YES | Type: rc.conf
+- Reboot
 
 ## Vitrual Machines
 - cent7min on Proxmox
@@ -53,6 +66,14 @@ cf site buildout generics
 ## Setup digital-rebar on cent7min
 
 ## Test PXE boot
+
+## Install proxmox
+
+- USB key boot
+- Install options
+  - root-Color#What!
+  - FQDN: pm1.2cld.net
+  - IP: 192.168.1.221 NM: 24 GW: 192.168.1.1
  
 ## Reference docs
 
