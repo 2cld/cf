@@ -81,7 +81,7 @@ cf site buildout generics
 - [Best Practices - Metric and label naming](https://prometheus.io/docs/practices/naming/)
 - [5 Best Practices for Using AI to Automatically Monitor Your Kubernetes Environment](https://www.anodot.com/blog/kubernetes-monitoring-best-practices/)
 - [Anomaly Detection](https://www.anodot.com/blog/what-is-anomaly-detection/)
-- [tbd]()
+- [Prometheus - Exporters](https://github.com/prometheus/docs/blob/master/content/docs/instrumenting/exporters.md)
 - [tbd]()
 - [tbd]()
 
