@@ -76,6 +76,15 @@ cf site buildout generics
   - FQDN: pm1.2cld.net
   - IP: 192.168.1.221 NM: 24 GW: 192.168.1.1
  
+## Monitoring
+- [Monitoring, the Prometheus Way](https://www.youtube.com/watch?v=PDxcEzu62jk)
+- [Best Practices - Metric and label naming](https://prometheus.io/docs/practices/naming/)
+- [5 Best Practices for Using AI to Automatically Monitor Your Kubernetes Environment](https://www.anodot.com/blog/kubernetes-monitoring-best-practices/)
+- [Anomaly Detection](https://www.anodot.com/blog/what-is-anomaly-detection/)
+- [tbd]()
+- [tbd]()
+- [tbd]()
+
 ## Reference docs
 
 - [ProxMox - Web_Interface_Via_Nginx_Proxy](https://pve.proxmox.com/wiki/Web_Interface_Via_Nginx_Proxy)
