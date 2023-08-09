@@ -3,7 +3,6 @@ Based on the idea that local e-commerse is critical for retailers.  Even in the 
 
 - [Cities role in Rural Broadband](https://www.voanews.com/silicon-valley-technology/rural-broadband-sometimes-cities-must-step)
 - [local e-commerce](https://medium.com/@dariusvasefi/what-is-local-e-commerce-and-its-key-role-in-the-new-retail-store-stack-645a95730295)
-- [Croft Utility Partners](http://croftutilitypartners.com/home/)
 
 ### DevStuff
 
@@ -17,11 +16,3 @@ Based on the idea that local e-commerse is critical for retailers.  Even in the 
 - [WebRTC](https://en.wikipedia.org/wiki/WebRTC)
 - [WebRTC - Gateway](https://en.wikipedia.org/wiki/WebRTC_Gateway)
 - [MicroServices with P2P networks](https://github.com/lithdew/flatend)
-
-- [tbd]()
-- [tbd]()
-- [tbd]()
-- [tbd]()
-- [tbd]()
-- [tbd]()
-- [tbd]()
