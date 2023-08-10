@@ -17,7 +17,9 @@
 | ~~[https://192.168.6.6:444/](https://192.168.6.6:444/)~~ | ~~sg2~~ | (https) sg2 on subnet | vm on cg2 | na |
 | ~~[https://192.168.6.7:8006/](https://192.168.6.7:8006/)~~ | ~~cg2~~ | cg2 subnet | vm on cg2 | na |
 | Plex | - | - | - | na |
-| [https://192.168.6.3:32400/](https://192.168.6.3:32400/) | plex | cfPlex | app on cfPlex | 10-C3-7B-46-0C-ED |
+| [https://192.168.6.3:32400/](https://192.168.6.3:32400/) | plex | cfPlex | cf:cg app on cfPlex | 10-C3-7B-46-0C-ED |
+| [http://192.168.6.11/](http://192.168.6.11/) | tuner | HDHR-1080AD03 | cf:tvswitch | 00:18:dd:08:0a:d0 |
+| [http://192.168.6.12/](http://192.168.6.12/) | tv | FireTVMain | cf:wifi | 48:43:dd:74:f1:72	|
 |---------------------|---------|-------------|-------------|-----|
 | catTemp | - | - | - | na |
 | [https://192.168.0.201:32400/](https://192.168.0.201:32400/) | plex | cfPlex | app on sg2 proxmox | 10-C3-7B-46-0C-ED |
@@ -37,25 +39,6 @@
 
 | Network Name     | MAC Address       | IP         | port  | description     | rm | link |
 |------------------|-------------------|------------|-------|-----------------|----|------|
-|	na	                 | na                | na           | sw1p0 | Spectrum Modem  | sr | |
-|	Archer_C7	           | 18-A6-F7-31-9C-07 | 192.168.0.1  |sw1int | TP-LINK AC1720  | sr | [admin](http://192.168.0.1/) |
-|------------------|-------------------|--------------|-------|-----------------|----|------|
-|	~~KathysRokuUltra~~	 | 84-EA-ED-A8-64-9x | na           | wifi  | KathysRokuUltra | lr | |
-|	KathysRokuUltra	     | 84-EA-ED-A8-64-91 | 192.168.0.21 | sw2p1 | KathysRokuUltra | lr | |
-|	TIVO-74600019083B6E2 | 00-11-D9-38-0B-FC | 192.168.0.22 | sw2p2 | Kathys160       | lr | |
-| gusHPLaptop          | 00-23-8B-86-38-61 | 192.168.0.23 | sw2p3 | gusHPLaptop win10| lr | rmdesk [plex](http://192.168.0.23:32400) |
-| gusGram              | AC-74-B1-02-FB-CF | 192.168.0.28 | wifi  | gusGram win11 i7| lr | rmdesk |
-|	Portal-8B57B421F784  | A4-0E-2B-4C-EF-C7 | 192.168.0.29 | wifi  | portaltv        | lr | |
-| pictureframe         | na                | na           | wifi  | picture frame   | lr | |
-|------------------|-------------------|------------|-------|-----------------|----|------|
-|	~~StevesRokuUltra~~	| 8C-49-62-0B-69-8C | 192.168.0.24 | ~~sw2p4~~ | StevesRokuUltra | sr | |
-|	StevesRokuUltra	     | 8C-49-62-0B-69-8D | 192.168.0.14 | wifi  | StevesRokuUltra | sr | |
-|	TIVO-8480001902B1749 | 00-11-D9-5F-47-83 | 192.168.0.15 | wifi  | Steves640       | sr | |
-|	TIVO-8480001902B1749 | 00-11-D9-5F-47-82 | 192.168.0.11 | sw1p1 | Steves640       | sr | |
-| TIVO-748000190569948 | 00-11-D9-35-02-A8 | 192.168.0.12 | sw1p2 | Steves320       | sr | |
-|	HDHR-10802956	       | 00-18-DD-08-02-95 | 192.168.0.13 | sw2p4 | plexTuner       | sr | [admin](http://192.168.0.13/) |
-| switch 1 to 2        | na                | na      |sw1p4-sw2p0 | sw1-sw2        |sr-lr| |
-| switch 1 to 3        | basement run      | na      |sw1p3-sw2p0 | sw1-sw3        |sr-bm| |
 |------------------|-------------------|------------|-------|-----------------|----|------|
 |	cfPlex               | 10-C3-7B-46-0C-ED | 192.168.0.201 | sw1p1 | cfPlex chris's  | bm | rmdesk [plex](http://192.168.0.201:32400) |
 |	cfsg2   	           | 00-15-5D-02-71-03 | 192.168.0.202 | vmbrg | trueNAS_vm-cfPlex | bm | [admin](http://192.168.0.202:8006/) |
@@ -69,23 +52,12 @@
 
 | Coax name  | source   | destination | locations |
 | ---------- |----------|-------------|-----------|
-| ant feed   | main ant | coax amp    | attic to basement |
-| spl01 feed | coax amp | spl01       | basement |
-| sr feed    | spl01    | spl02       | basement to sr |
-| Steves320 feed | spl02p1 | Steves320 Tivo ant | sr |
-| plexTuner feed | spl02p2 | plexTuner ant | sr |
-| Kathys160 feed | spl02p3 | Kathys160 ant | lr |
-
-| Coax name  | source   | destination | locations |
-| ---------- |----------|-------------|-----------|
-| cable feed   | main cable | spl03 input | sr |
-| spl03 feed | spl03p1 | spectrum modem       | sr |
-| spl04 feed | spl03p2   | spl04 input       | sr |
-| Steves640 feed | spl04p1 | Steves320 Tivo cable | sr |
-| Kathys160 feed | spl04p2 | Kathys160 cable | sr |
-| ?? feed | spl04p3 | ?? cable | sr |
-| ?? feed | spl04p4 | ?? cable  | sr |
-| Kathys160 feed | spl04p5 | ?? cable  | sr |
+| cable feed | fiber box | spl01    | box to spl01 |
+| HDHR-1080AD03 feed | spl01p1 | tuner | bm |
+| LivingRoom feed | spl01p2 | tv | lr |
+| LivingRoom feed | spl01p3 | none | lr |
+| Bedroom feed | spl01p4 | tv | br |
+| basement feed | spl01p5 | tv | bm |
 
 # Reference Docs
 - sl network based on [https://netstack.org/](https://netstack.org/) sl.lan model [https://netstack.org/docs/lan/](https://netstack.org/docs/lan/)
