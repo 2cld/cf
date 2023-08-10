@@ -4,7 +4,7 @@
 |------------------------------|------|-------------|-------------|
 |      24.216.208.251 : 32400  | plex | gusHPlex    | sl |
 |      24.149.22.11   : 32400  | plex | cfPlex      | cf |
-|      24.149.22.11   : 32600  | plex | cfDVR       | cf |
+|      24.149.22.11   : 32500  | plex | cfDVR       | cf |
 | test.christrees.com :  2020  | ssh  | remote xfer | cf |
 
 | Service admin Link  | type    | description | location    | mac |
@@ -19,6 +19,7 @@
 | ~~[https://192.168.6.7:8006/](https://192.168.6.7:8006/)~~ | ~~cg2~~ | bu02 subnet | 00:11:32:08:c4:24 |
 | Plex | - | - | - | na |
 | [https://192.168.6.3:32400/](https://192.168.6.3:32400/) | plex | cfPlex | cf:cg app on cfPlex | 10-C3-7B-46-0C-ED |
+| [https://192.168.6.6:32400/](https://192.168.6.6:32400/) | plex | cfDVR | cf:cg app on cfDVR | 00:11:32:08:c4:242 |
 | [http://192.168.6.10:5000/](http://192.168.6.10:5000/) | nas | cf: | cf:tvswitch | 00:18:dd:08:0a:d0 |
 | [http://192.168.6.11/](http://192.168.6.11/) | tuner | HDHR-1080AD03 | cf:tvswitch | 00:18:dd:08:0a:d0 |
 | [http://192.168.6.12/](http://192.168.6.12/) | tv | FireTVMain | cf:wifi | 48:43:dd:74:f1:72	|
