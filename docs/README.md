@@ -1,10 +1,11 @@
-[edit]()
+[edit](https://github.com/2cld/cf/edit/master/docs/README.md)
 
 | External Service             | type | description | location    |
 |------------------------------|------|-------------|-------------|
 |      24.216.208.251 : 32400  | plex | gusHPlex    | sl |
-| test.christrees.com :  2020  | ssh  | remote xfer | cf |
 |      24.149.22.11   : 32400  | plex | cfPlex      | cf |
+|      24.149.22.11   : 32600  | plex | cfDVR       | cf |
+| test.christrees.com :  2020  | ssh  | remote xfer | cf |
 
 | Service admin Link  | type    | description | location    | mac |
 |---------------------|---------|-------------|-------------|-----|
@@ -13,11 +14,12 @@
 | [https://192.168.6.2:443/](https://192.168.6.2:443/) | sg | cf:sg truenas (https) sg on subnet | vm on cg | na |
 | [https://192.168.6.3/](https://192.168.6.3/) | cg | cf:cg Hyper-V cg subnet | cg hardware | 10-C3-7B-46-0C-ED |
 | ns2 | - | - | backup | na |
-| [http://192.168.6.6:5000/](http://192.168.6.6:5000/) | cfDVR | sg2 on ds411 synology | cf:sg2 | 00:11:32:08:c4:24 |
+| [http://192.168.6.6:5000/](http://192.168.6.6:5000/) | cfDVR | cf:sg2 on ds411 synology | cf:sg2 | 00:11:32:08:c4:24 |
 | ~~[https://192.168.6.7:8006/](https://192.168.6.7:8006/)~~ | ~~cg2~~ | cg2 subnet | vm on cg2 | na |
 | ~~[https://192.168.6.7:8006/](https://192.168.6.7:8006/)~~ | ~~cg2~~ | bu02 subnet | 00:11:32:08:c4:24 |
 | Plex | - | - | - | na |
 | [https://192.168.6.3:32400/](https://192.168.6.3:32400/) | plex | cfPlex | cf:cg app on cfPlex | 10-C3-7B-46-0C-ED |
+| [http://192.168.6.10:5000/](http://192.168.6.10:5000/) | nas | cf: | cf:tvswitch | 00:18:dd:08:0a:d0 |
 | [http://192.168.6.11/](http://192.168.6.11/) | tuner | HDHR-1080AD03 | cf:tvswitch | 00:18:dd:08:0a:d0 |
 | [http://192.168.6.12/](http://192.168.6.12/) | tv | FireTVMain | cf:wifi | 48:43:dd:74:f1:72	|
 | [http://192.168.6.13/](http://192.168.6.13/) | tv | FireTVcat | cf:wifi || a4:08:01:60:57:35	|
@@ -30,7 +32,7 @@
 
 | Service admin link | description |
 |---|---|
-| [status_devicetable](http://192.168.6.1/#/html/status/status_devicetable.html) | MAC Devices |
+| [status_device table](http://192.168.6.1/#/html/status/status_devicetable.html) | MAC Devices |
 | [dhcp reservation](http://192.168.6.1/#/html/advanced/ip/advanced_ip_dhcpreservation.html) | DHCP Reservations |
 | [port forwarding](http://192.168.6.1/#/html/advanced/security/advanced_security_advancedportforwarding.html) | Port Forwarding |
 | [dmz hosting](http://192.168.6.1/#/html/advanced/security/advanced_security_dmzhosting.html) | DMZ |
