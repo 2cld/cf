@@ -7,7 +7,7 @@
 |      24.149.22.11   : 32500  | plex | cfDVR       | cf |
 | test.christrees.com :  2020  | ssh  | remote xfer | cf |
 
-| Service admin Link  | type    | description | location    | mac |
+| ns service admin    | type    | description | location    | mac |
 |---------------------|---------|-------------|-------------|-----|
 | [http://192.168.6.1/](http://192.168.6.1/) | ng | 854G-1 ng on subnet | cf:ng | 48-77-46-F6-BD-93 |
 | [http://192.168.6.2/](http://192.168.6.2/) | sg | truenas sg on subnet | cf:sg vm on cg | 00-15-5D-00-C9-00 |
@@ -15,8 +15,8 @@
 | [https://192.168.6.3/](https://192.168.6.3/) | cg | cf:cg Hyper-V cg subnet | cg hardware | 10-C3-7B-46-0C-ED |
 | ns2 | - | - | backup | na |
 | [http://192.168.6.6:5000/](http://192.168.6.6:5000/) | cfDVR | cf:sg2 on ds411 synology | cf:sg2 | 00:11:32:08:c4:24 |
-| ~~[https://192.168.6.7:8006/](https://192.168.6.7:8006/)~~ | ~~cg2~~ | cg2 subnet | vm on cg2 | na |
-| ~~[https://192.168.6.7:8006/](https://192.168.6.7:8006/)~~ | ~~cg2~~ | bu02 subnet | cf | 00:11:32:08:c4:24 |
+| [https://192.168.6.8/](https://192.168.6.8/) | bg | truenas old gh-garage | backup | 00:08:9b:e2:83:94 |
+| [https://192.168.6.9/](https://192.168.6.9/) | dg | git | vm on cg2 | 02:30:48:35:ea:a0 |
 | [http://192.168.6.10:5000/](http://192.168.6.10:5000/) | nas | cfbu | cf | 00:11:32:12:b4:ed|
 | Plex | - | - | - | na |
 | [https://192.168.6.3:32400/](https://192.168.6.3:32400/) | plex | cfPlex | cf:cg app on cfPlex | 10-C3-7B-46-0C-ED |
