@@ -15,7 +15,7 @@
 | [https://192.168.6.3/](https://192.168.6.3/) | cg | cf:cg Hyper-V cg subnet | cg hardware | 10-C3-7B-46-0C-ED |
 | ns2 | - | - | backup | na |
 | [http://192.168.6.6:5000/](http://192.168.6.6:5000/) | cfDVR | cf:sg2 on ds411 synology | cf:sg2 | 00:11:32:08:c4:24 |
-| [https://192.168.6.8/](https://192.168.6.8/) | bg | truenas old gh-garage | backup | 00:08:9b:e2:83:94 |
+| [https://192.168.6.8/](https://192.168.6.8/) | bg | truenas old gh-garage | backup | 00:30:48:c7:82:b2 |
 | [https://192.168.6.9/](https://192.168.6.9/) | dg | git | vm on cg2 | 02:30:48:35:ea:a0 |
 | [http://192.168.6.10:5000/](http://192.168.6.10:5000/) | nas | cfbu | cf | 00:11:32:12:b4:ed|
 | Plex | - | - | - | na |
