@@ -19,16 +19,19 @@
 | [https://192.168.6.9/](https://192.168.6.9/) | dg | git | vm on cg2 | 02:30:48:35:ea:a0 |
 | [http://192.168.6.10:5000/](http://192.168.6.10:5000/) | nas | cfbu | cf | 00:11:32:12:b4:ed|
 | Plex | - | - | - | na |
-| [https://192.168.6.3:32400/](https://192.168.6.3:32400/) | plex | cfPlex | cf:cg app on cfPlex | 10-C3-7B-46-0C-ED |
-| [https://192.168.6.6:32400/](https://192.168.6.6:32400/) | plex | cfDVR | cf:cg app on cfDVR | 00:11:32:08:c4:242 |
+| [https://192.168.6.3:32400/](https://192.168.6.3:32400/) | plex | cfPlex | cf:cg app on cfPlex i7 win11 | 10-C3-7B-46-0C-ED |
+| [https://192.168.6.6:32400/](https://192.168.6.6:32400/) | plex | cfDVR | cf:cg app on cfbu synology 211j | 00:11:32:08:c4:242 |
 | [http://192.168.6.11/](http://192.168.6.11/) | tuner | HDHR-1080AD03 | cf:tvswitch | 00:18:dd:08:0a:d0 |
 | [http://192.168.6.12/](http://192.168.6.12/) | tv | FireTVMain | cf:wifi | 48:43:dd:74:f1:72	|
 | [http://192.168.6.13/](http://192.168.6.13/) | tv | FireTVcat | cf:wifi | a4:08:01:60:57:35	|
 |---------------------|---------|-------------|-------------|-----|
-| catTemp | - | - | - | na |
-| [https://192.168.0.201:32400/](https://192.168.0.201:32400/) | plex | cfPlex | app on sg2 proxmox | 10-C3-7B-46-0C-ED |
-| [http://192.168.0.202:80/](http://192.168.0.202:80/) | sg2 | cf-sg2 on sl subnet | vm on cf-cg2 | 00-15-5D-02-71-03 |
-
+| catWorkstations | - | - | - | na |
+| [http://192.168.6.30/](http://192.168.6.30/) | ws | cybertruck | win10 i7 | 04:d9:f5:c8:c7:fc	|
+| [http://192.168.6.31/](http://192.168.6.31/) | ws | tbd | tbd| tbd	|
+| [http://192.168.6.32/](http://192.168.6.32/) | ws | catSurface | win10 i5 | 28:18:78:b7:be:b7	|
+| [http://192.168.6.33/](http://192.168.6.33/) | ws | cats-Mac-mini | macOSX i7 | 3c:07:54:72:49:e2	|
+| other | - | - | - | na |
+| [http://192.168.6.40/](http://192.168.6.40/) | wifi | cellphone | pixel-6a | 88:54:1f:3a:77:03	|
 ---
 
 | Service admin link | description |
