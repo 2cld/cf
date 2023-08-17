@@ -32,6 +32,7 @@
 | [http://192.168.6.33/](http://192.168.6.33/) | ws | cats-Mac-mini | macOSX i7 | 3c:07:54:72:49:e2	|
 | other | - | - | - | na |
 | [http://192.168.6.40/](http://192.168.6.40/) | wifi | cellphone | pixel-6a | 88:54:1f:3a:77:03	|
+
 ---
 
 | Service admin link | description |
