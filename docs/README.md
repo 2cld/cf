@@ -37,11 +37,11 @@
 | other | - | - | - | na |
 | [http://192.168.6.40/](http://192.168.6.40/) | wifi | cellphone | pixel-6a | 88:54:1f:3a:77:03	|
 | Security Cameras |---------|------|-------------|--|
-| zmodo camera web | [http://192.168.6.161](http://192.168.6.161) | macDHCP | zmodo | - |
-| zmodo camera web | [http://192.168.6.162](http://192.168.6.162) | macDHCP | zmodo | - |
-| zmodo camera web | [http://192.168.6.163](http://192.168.6.163) | macDHCP | zmodo | - |
-| zmodo camera web | [http://192.168.6.164](http://192.168.6.164) | macDHCP | zmodo | - |
-| [zmodo - web](https://user.zmodo.com/#/home) | [http://192.168.6.165](http://192.168.6.165) | macDHCP | zmodo | - |
+| [http://192.168.6.161](http://192.168.6.161) | macDHCP | zmodo | camera web | - |
+| [http://192.168.6.162](http://192.168.6.162) | macDHCP | zmodo | camera web | - |
+| [http://192.168.6.163](http://192.168.6.163) | macDHCP | zmodo | camera web | - |
+| [http://192.168.6.164](http://192.168.6.164) | macDHCP | zmodo | camera web | - |
+| [http://192.168.6.165](http://192.168.6.165) | macDHCP | [zmodo remote](https://user.zmodo.com/#/home) | zmodo hub | - |
 
 ---
 
