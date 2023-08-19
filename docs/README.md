@@ -2,7 +2,7 @@
 
 | External Service             | type | description | location    |
 |------------------------------|------|-------------|-------------|
-|      24.216.208.251 : 32400  | plex | [gusHPlex](https://24.216.208.251 : 32400) | sl |
+|      24.216.208.251 : 32400  | plex | [gusHPlex](https://24.216.208.251:32400) | sl |
 |      24.149.22.11   : 32400  | plex | [cfPlex](https://24.149.22.11:32400) | cf |
 |      24.149.22.11   : 32500  | plex | [cfDVR](https://24.149.22.11:32500)  | cf |
 | test.christrees.com :  2020  | ssh  | sg | cf |
