@@ -106,13 +106,13 @@ DNS Server:	71.10.216.1 , 71.10.216.2
 - [tbd]()
 
 ## User Storage DVR
+
 | External Service             | type | description | location    |
 |------------------------------|------|-------------|-------------|
-|      24.216.208.251 : 32400  | plex | [gusHPlex](https://24.216.208.251:32400) | sl |
 |      24.149.22.11   : 32400  | plex | [cfPlex](https://24.149.22.11:32400) | cf |
 |      24.149.22.11   : 32500  | plex | [cfDVR](https://24.149.22.11:32500)  | cf |
-| test.christrees.com :  2020  | ssh  | sg2 | cf |
-| test.christrees.com :  2021  | ssh  | sg2 | cf |
+| test.christrees.com :  2020  | ssh  | cf-sg2 | cf |
+| test.christrees.com :  2021  | ssh  | cfDVR | cf |
 
 ### cf-s2 trueNAS vm on win11 cfPlex
 ```
