@@ -105,6 +105,33 @@ DNS Server:	71.10.216.1 , 71.10.216.2
 - [cattvwin10 channel map](https://docs.google.com/spreadsheets/d/1wjN1_N5Vjji6NQgE3DXi4D-S76sAHppQrdXsqh5qX2E/edit#gid=0) 
 - [tbd]()
 
+## User Storage DVR
+| External Service             | type | description | location    |
+|------------------------------|------|-------------|-------------|
+|      24.216.208.251 : 32400  | plex | [gusHPlex](https://24.216.208.251:32400) | sl |
+|      24.149.22.11   : 32400  | plex | [cfPlex](https://24.149.22.11:32400) | cf |
+|      24.149.22.11   : 32500  | plex | [cfDVR](https://24.149.22.11:32500)  | cf |
+| test.christrees.com :  2020  | ssh  | sg2 | cf |
+| test.christrees.com :  2021  | ssh  | sg2 | cf |
+
+### cf-s2 trueNAS vm on win11 cfPlex
+```
+% ssh -p 2020 trink@test.christrees.com
+trink@cf-sg2:~$ pwd
+/mnt/catpool/users/trink
+trink@cf-sg2:~$ ls /mnt/catpool/trink/trinkDVR/
+'NBC Nightly News With Lester Holt (2015)'
+trink@cf-sg2:~$ 
+```
+
+### cfDVR Synology 411 running plex in jail
+```
+ % ssh -p 2021 trink@test.christrees.com
+trink@cfDVR:~$ ls /volume1/pshare/trinkDVR/
+NBC Nightly News With Lester Holt (2015)
+trink@cfDVR:~$ 
+```
+
 ### Reference
 - Domain [https://domains.google.com/registrar/](https://domains.google.com/registrar/)
   - DNS [https://domains.google.com/registrar/christrees.com/dns](https://domains.google.com/registrar/christrees.com/dns)
