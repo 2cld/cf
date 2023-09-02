@@ -121,7 +121,7 @@ DNS Server:	71.10.216.1 , 71.10.216.2
 |-----------------------------------|------|-------------|-------------|
 | G: \\10.147.17.66\gusHPlexSFEPart | gusHPlex | [gusHPlexG.md](./gusHPlexG) remoted storage | sl |
 | M: \\192.168.6.2\MediaShare       | cfPlex  | TrueNAS MediaShare storage | cf |
-| O: \\192.168.6.10\plexnsds        | cfPlex  | StarTrek storage | cf |
+| O: \\192.168.6.10\plexnsds        | cfPlex  | [cfPlex0.md](./cfPlex0) StarTrek storage | cf |
 | P: \\192.168.6.6\pshare           | cfDVR | Synology NAS storage | cf |
 
 - [Plex Naming Conventions and Library guide](https://www.oliviertravers.com/plex-complex-libraries-ultimate-media-server/)
