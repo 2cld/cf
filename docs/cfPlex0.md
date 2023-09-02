@@ -1,3 +1,50 @@
+# Folders
+
+```
+C:\>tree O:
+Folder PATH listing for volume plexnsds
+Volume serial number is B37D-0248
+O:\
+└───plexdvr
+    └───startrekDVR
+        ├───.grab
+        ├───Star Trek (1966)
+        │   ├───Season 01
+        │   ├───Season 02
+        │   └───Season 03
+        ├───Star Trek Deep Space Nine (1993)
+        │   ├───Season 02
+        │   ├───Season 03
+        │   ├───Season 04
+        │   ├───Season 05
+        │   ├───Season 06
+        │   └───Season 07
+        ├───Star Trek Enterprise (2001)
+        │   ├───Season 02
+        │   └───Season 03
+        ├───Star Trek The Next Generation (1987)
+        │   ├───Season 01
+        │   ├───Season 02
+        │   ├───Season 03
+        │   ├───Season 04
+        │   ├───Season 05
+        │   ├───Season 06
+        │   └───Season 07
+        └───Star Trek Voyager (1995)
+            ├───Season 01
+            ├───Season 02
+            ├───Season 04
+            ├───Season 05
+            ├───Season 06
+            └───Season 07
+                └───BL_proxy
+                    └───Star Trek Voyager (1995) - S07E24 - Endgame.ts
+
+C:\>
+```
+
+# Files
+
 ```
 C:\>tree O: /F
 Folder PATH listing for volume plexnsds
