@@ -115,6 +115,17 @@ DNS Server:	71.10.216.1 , 71.10.216.2
 | test.christrees.com :  2020  | ssh  | cf-sg2 | cf |
 | test.christrees.com :  2021  | ssh  | cfDVR | cf |
 
+## cfPlex Storage Mapping (10.147.17.228 - 192.168.6.2)
+
+| cfPlex 10.147.17.228 /192.168.6.2 | Plex | Plex Libraries | location |
+|-----------------------------------|------|-------------|-------------|
+| G: \\10.147.17.66\gusHPlexSFEPart | gusHPlex | gusHPlex remoted storage | sl |
+| M: \\192.168.6.2\MediaShare       | cfPlex  | TrueNAS MediaShare storage | cf |
+| O: \\192.168.6.10\plexnsds        | cfPlex  | StarTrek storage | cf |
+| P: \\192.168.6.6\pshare           | cfDVR | Synology NAS storage | cf |
+
+- [Plex Naming Conventions and Library guide](https://www.oliviertravers.com/plex-complex-libraries-ultimate-media-server/)
+  
 ### cf-s2 trueNAS vm on win11 cfPlex
 ```
 % ssh -p 2020 trink@test.christrees.com
