@@ -119,7 +119,7 @@ DNS Server:	71.10.216.1 , 71.10.216.2
 
 | cfPlex 10.147.17.228 /192.168.6.2 | Plex | Plex Libraries | location |
 |-----------------------------------|------|-------------|-------------|
-| G: \\10.147.17.66\gusHPlexSFEPart | gusHPlex | gusHPlex remoted storage | sl |
+| G: \\10.147.17.66\gusHPlexSFEPart | gusHPlex | [gusHPlexG.md](./gusHPlexG) remoted storage | sl |
 | M: \\192.168.6.2\MediaShare       | cfPlex  | TrueNAS MediaShare storage | cf |
 | O: \\192.168.6.10\plexnsds        | cfPlex  | StarTrek storage | cf |
 | P: \\192.168.6.6\pshare           | cfDVR | Synology NAS storage | cf |
