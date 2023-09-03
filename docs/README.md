@@ -9,6 +9,17 @@
 | test.christrees.com :  2020  | ssh  | sg | cf |
 | test.christrees.com :  2021  | ssh  | sg2 | cf |
 
+## port forward
+
+| External | Internal | IP | detail |
+|-------|-------|---------------|---|
+| 32400	| 32400	| 192.168.6.3 | cfPlex on cfPlex | 
+| 32800	| 32400	| 192.168.6.6 | cfDVR on cfDVR | 
+|  2020 |    22 | 192.168.6.2 | cf-sg2 truenas | 
+|  2021 |  2020 | 192.168.6.6 | cfDVR  | 
+
+## Internal Service
+
 | ns service admin    | type    | description | location    | mac |
 |---------------------|---------|-------------|-------------|-----|
 | [http://192.168.6.1/](http://192.168.6.1/) | ng | 854G-1 ng on subnet | cf:ng | 48:77:46:F6:BD:93 |
