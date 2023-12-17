@@ -157,12 +157,15 @@ NBC Nightly News With Lester Holt (2015)
 trink@cfDVR:~$ 
 ```
 
-# Storage Network - [cattv-zt]( )
+# Storage Network - [cattv-zt](https://my.zerotier.com/network/52b337794f721ef7)
 
 | ns service admin    | type    | description | location    | mac |
 |---------------------|---------|-------------|-------------|-----|
-| [http://192.168.6.1/](http://192.168.6.1/) | ng | 854G-1 ng on subnet | cf:ng | 48:77:46:F6:BD:93 |
-| [http://192.168.6.2/](http://192.168.6.2/) | sg | truenas sg on subnet | cf:sg vm on cg | 00:15:5D:00:C9:00 |
+| [http://10.147.19.1/](http://10.147.19.1/) | ws | cattvwin10 | cf:ws |tb |
+| [http://10.147.19.127/](http://10.147.19.127/) | ws | catghwin10 | cf:ws |tb |
+| [http://10.147.19.228/](http://10.147.19.228/) | ws | cfplex | cf:ws |tb |
+| [http://10.147.19.59/](http://10.147.19.59/) | ws | catmini | cf:ws |tb |
+| [http://10.147.19.62:8080/](http://10.147.19.62:8080/) | ws | catqnapsg2 | cf:ws |tb |
 
 
 ### Reference
