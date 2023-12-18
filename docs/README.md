@@ -157,7 +157,18 @@ NBC Nightly News With Lester Holt (2015)
 trink@cfDVR:~$ 
 ```
 
-# Storage Network - [cattv-zt](https://my.zerotier.com/network/52b337794f721ef7)
+# Grid Network - [cat-ghadmin-grid](https://my.zerotier.com/network/d5e5fb65371eb4a4)
+
+| ns service admin    | type    | description | location    | mac |
+|---------------------|---------|-------------|-------------|-----|
+| [http://10.147.17.1/](http://10.147.17.1/) | ws | cattvwin10 | cf:ws |tb |
+| [http://10.147.17.127/](http://10.147.17.127/) | ws | catghwin10 | cf:ws |tb |
+| [http://10.147.17.228/](http://10.147.17.228/) | ws | cfplex | cf:ws |tb |
+| [http://10.147.17.59/](http://10.147.17.59/) | ws | catmini | cf:ws |tb |
+| [http://10.147.17.219/](http://10.147.17.219/) | ws | CyberTruck | cf:ws | tb |
+| [http://10.147.17.223/](http://10.147.17.223/) | ws | catsurface | cf:ws | tb |
+
+# Storage Network - [cattv](https://my.zerotier.com/network/52b337794f721ef7)
 
 | ns service admin    | type    | description | location    | mac |
 |---------------------|---------|-------------|-------------|-----|
@@ -165,8 +176,9 @@ trink@cfDVR:~$
 | [http://10.147.19.127/](http://10.147.19.127/) | ws | catghwin10 | cf:ws |tb |
 | [http://10.147.19.228/](http://10.147.19.228/) | ws | cfplex | cf:ws |tb |
 | [http://10.147.19.59/](http://10.147.19.59/) | ws | catmini | cf:ws |tb |
-| [http://10.147.19.62:8080/](http://10.147.19.62:8080/) | ws | catqnapsg2 | cf:ws |tb |
-
+| [http://10.147.19.25/](http://10.147.19.25/) | sg | sg2 | cf:ws | [qnap](https://netstack.org/docs/lan/storage/qnap/) TS-431 driver issue |
+| [http://10.147.19.62/](http://10.147.19.62/) | ws | catqnapsg2 | cf:ws | old [qnap](https://netstack.org/docs/lan/storage/qnap/) TS-431 |
+| [http://10.147.19.62:8080/](http://10.147.19.62:8080/) | ws | catqnapsg2 | cf:ws | [qnap](https://netstack.org/docs/lan/storage/qnap/) portal |
 
 ### Reference
 - Domain [https://domains.google.com/registrar/](https://domains.google.com/registrar/)
