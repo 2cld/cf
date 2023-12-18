@@ -34,6 +34,7 @@
 | [https://192.168.6.8/](https://192.168.6.8/) | bg | truenas old gh-garage | backup | 00:30:48:c7:82:b2 |
 | [https://192.168.6.9/](https://192.168.6.9/) | dg | git | vm on cg2 | 02:30:48:35:ea:a0 |
 | [http://192.168.6.10:5000/](http://192.168.6.10:5000/) | nas | cfbu | cf | 00:11:32:12:b4:ed|
+| [http://192.168.6.35:8080/](http://192.168.6.35:8080/) | nas | sg2 | cf | qnap temp |
 | Plex | - | - | - | na |
 | [https://192.168.6.3:32400/](https://192.168.6.3:32400/) | plex | [cfPlex](https://24.149.22.11:32400) | cf:cg on cfPlex i7 win11 | 10:C3:7B:46:0C:ED |
 | [https://192.168.6.6:32400/](https://192.168.6.6:32400/) | plex | [cfDVR](https://24.149.22.11:32500) | cf:cg on cfDVR synology ds411 | 00:11:32:08:c4:242 |
