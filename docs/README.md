@@ -3,11 +3,12 @@
 
 | External Service             | type | description | location    |
 |------------------------------|------|-------------|-------------|
-|      24.216.208.251 : 32400  | plex | [gusHPlex](https://24.216.208.251:32400) | sl |
-|      24.149.22.11   : 32400  | plex | [cfPlex](https://24.149.22.11:32400) | cf |
-|      24.149.22.11   : 32500  | plex | [cfDVR](https://24.149.22.11:32500)  | cf |
-| test.christrees.com :  2020  | ssh  | sg | cf |
-| test.christrees.com :  2021  | ssh  | sg2 | cf |
+|      24.149.22.11   : 32400  | 6.3 plex | [cfPlex](https://24.149.22.11:32400) | cf |
+|      24.149.22.11   : 32500  | 6.6 plex | [cfDVR](https://24.149.22.11:32500)  | cf |
+| test.christrees.com :  2020  | 6.2 ssh  | sg | cf |
+| test.christrees.com :  2021  | 6.6 ssh  | sg2 | cf |
+|      24.216.208.251 : 32400  | 0.6 plex | [slPlex](https://24.216.208.251:32400) | sl |
+|      24.216.208.251 : 32500  | 0.9 plex | [slDVR](https://24.216.208.251:32500) | sl |
 
 ## port forward
 
