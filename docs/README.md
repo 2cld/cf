@@ -15,8 +15,8 @@
 | External | Internal | IP | detail |
 |-------|-------|---------------|---|
 | 32400	| 32400	| 192.168.6.3 | cfPlex on cfPlex | 
-| 32800	| 32400	| 192.168.6.6 | cfDVR on cfDVR | 
-|  2020 |    22 | 192.168.6.2 | cf-sg2 truenas | 
+| 32500	| 32400	| 192.168.6.6 | cfDVR on cfDVR | 
+|  2020 |    22 | 192.168.6.2 | ~~cf-sg2 truenas~~ disabled | 
 |  2021 |  2020 | 192.168.6.6 | cfDVR  | 
 
 ## Internal Service
@@ -24,22 +24,21 @@
 | ns service admin    | type    | description | location    | mac |
 |---------------------|---------|-------------|-------------|-----|
 | [http://192.168.6.1/](http://192.168.6.1/) | ng | 854G-1 ng on subnet | cf:ng | 48:77:46:F6:BD:93 |
-| [http://192.168.6.2/](http://192.168.6.2/) | sg | truenas sg on subnet | cf:sg vm on cg | 00:15:5D:00:C9:00 |
-| [http://192.168.6.3/](http://192.168.6.3/) | cg | cf:cg Hyper-V cg subnet | cg hardware | 10:C3:7B:46:0C:ED |
+| [http://192.168.6.2/](http://192.168.6.2/) | sg | ~~truenas under Hyper-V~~ disabled sg on subnet | sg vm on cg (Hyper-V not stable) | 00:15:5D:00:C9:00 |
+| [http://192.168.6.3/](http://192.168.6.3/) | cg | cfPlex cf:cg Hyper-V on cfPlex (win11) subnet | cg hardware (Hyper-V) | 10:C3:7B:46:0C:ED |
 | res | - | - | - | na |
 | [http://192.168.6.4/](http://192.168.6.4/) | - | - | - | 00:00:00:00:00:04 |
 | [http://192.168.6.5/](http://192.168.6.5/) | - | - | - | 00:00:00:00:00:05 |
 | ns2 | - | - | backup | na |
-| [http://192.168.6.6:5000/](http://192.168.6.6:5000/) | cfDVR | cf:sg2 on ds411 synology | cf:sg2 | 00:11:32:08:c4:24 |
+| [http://192.168.6.6:5000/ buadmin](http://192.168.6.6:5000/) | cfDVR | cf:sg2 on ds411 synology | cf:sg2 | 00:11:32:08:c4:24 |
 | [http://192.168.6.7/](http://192.168.6.7/) | - | - | - | 00:00:00:00:00:07 |
-| [https://192.168.6.8/](https://192.168.6.8/) | bg | truenas old gh-garage | backup | 00:30:48:c7:82:b2 |
-| [https://192.168.6.9/](https://192.168.6.9/) | dg | git | vm on cg2 | 02:30:48:35:ea:a0 |
-| [http://192.168.6.10:5000/](http://192.168.6.10:5000/) | nas | cfbu | cf | 00:11:32:12:b4:ed|
-| [http://192.168.6.35:8080/](http://192.168.6.35:8080/) | nas | sg2 | cf | qnap temp |
+| [https://192.168.6.8/](https://192.168.6.8/) | bg | truenas old gh-garage | backup not running | 00:30:48:c7:82:b2 |
+| [https://192.168.6.9/](https://192.168.6.9/) | dg | git | vm on cg2 not running | 02:30:48:35:ea:a0 |
+| [http://192.168.6.10:5000/ nsadmin](http://192.168.6.10:5000/) | nas | cfbu | cf | 00:11:32:12:b4:ed|
 | Plex | - | - | - | na |
-| [https://192.168.6.3:32400/](https://192.168.6.3:32400/) | plex | [cfPlex](https://24.149.22.11:32400) | cf:cg on cfPlex i7 win11 | 10:C3:7B:46:0C:ED |
-| [https://192.168.6.6:32400/](https://192.168.6.6:32400/) | plex | [cfDVR](https://24.149.22.11:32500) | cf:cg on cfDVR synology ds411 | 00:11:32:08:c4:242 |
-| [http://192.168.6.11/](http://192.168.6.11/) | tuner | HDHR-1080AD03 | cf:tvswitch | 00:18:dd:08:0a:d0 |
+| [https://192.168.6.3:32400/ local](https://192.168.6.3:32400/) | plex | [cfPlex remote](https://24.149.22.11:32400) | cf:cg on cfPlex i7 win11 | 10:C3:7B:46:0C:ED |
+| [https://192.168.6.6:32400/ local](https://192.168.6.6:32400/) | plex | [cfDVR remote](https://24.149.22.11:32500) | cf:cg on cfDVR synology ds411 | 00:11:32:08:c4:242 |
+| [http://192.168.6.11/](http://192.168.6.11/) | tuner | [HDHR-1080AD03](http://192.168.6.11/) | cf:tvswitch | 00:18:dd:08:0a:d0 |
 | [http://192.168.6.12/](http://192.168.6.12/) | tv | FireTVMain | cf:wifi | 48:43:dd:74:f1:72	|
 | [http://192.168.6.13/](http://192.168.6.13/) | tv | FireTVcat | cf:wifi | a4:08:01:60:57:35	|
 |---------------------|---------|-------------|-------------|-----|
