@@ -31,7 +31,7 @@
 | [http://192.168.6.5/](http://192.168.6.5/) | - | - | - | 00:00:00:00:00:05 |
 | ns2 | - | - | backup | na |
 | [http://192.168.6.6:5000/ buadmin](http://192.168.6.6:5000/) | cfDVR | cf:sg2 on ds411 synology | cf:sg2 | 00:11:32:08:c4:24 |
-| [http://192.168.6.7/](http://192.168.6.7/) | - | - | - | 00:00:00:00:00:07 |
+| [http://192.168.6.7:8006/](http://192.168.6.7:8006/) | sg2.cf.2cld.net | proxmox 8.1.4 | - | 00:00:00:00:00:xx |
 | [https://192.168.6.8/](https://192.168.6.8/) | bg | truenas old gh-garage | backup not running | 00:30:48:c7:82:b2 |
 | [https://192.168.6.9/](https://192.168.6.9/) | dg | git | vm on cg2 not running | 02:30:48:35:ea:a0 |
 | [http://192.168.6.10:5000/ nsadmin](http://192.168.6.10:5000/) | nas | cfbu | cf | 00:11:32:12:b4:ed|
