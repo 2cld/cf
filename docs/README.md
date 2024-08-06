@@ -23,9 +23,9 @@
 
 | ns service admin    | type    | description | location    | mac |
 |---------------------|---------|-------------|-------------|-----|
-| [http://192.168.6.1/](http://192.168.6.1/) | ng | 854G-1 ng on subnet | cf:ng | 48:77:46:F6:BD:93 |
-| [http://192.168.6.2/](http://192.168.6.2/) | sg | ~~truenas under Hyper-V~~ disabled sg on subnet | sg vm on cg (Hyper-V not stable) | 00:15:5D:00:C9:00 |
-| [http://192.168.6.3/](http://192.168.6.3/) | cg | cfPlex cf:cg Hyper-V on cfPlex (win11) subnet | cg hardware (Hyper-V) | 10:C3:7B:46:0C:ED |
+| [http://192.168.6.1/](http://192.168.6.1/) | ng | 854G-1 [net gateway netstack]() on subnet | cf:ng | 48:77:46:F6:BD:93 |
+| [http://192.168.6.2/](http://192.168.6.2/) | sg | truenas  [storage gateway netstack]() on i3 | cf:sg  | b0:83:fe:65:80:80 |
+| [http://192.168.6.3/](http://192.168.6.3/) | cg | win11  [compute gateway netstack]() cfPlex (win11) subnet | cg hardware (Hyper-V) | 10:C3:7B:46:0C:ED |
 | res | - | - | - | na |
 | [http://192.168.6.4/](http://192.168.6.4/) | - | - | - | 00:00:00:00:00:04 |
 | [http://192.168.6.5/](http://192.168.6.5/) | - | - | - | 00:00:00:00:00:05 |
