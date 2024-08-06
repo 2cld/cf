@@ -3,19 +3,22 @@
 
 | External Service             | type | description | location    |
 |------------------------------|------|-------------|-------------|
-|      24.149.22.11   : 32400  | 6.3 plex | [cfPlex](https://24.149.22.11:32400) | cf |
-|      24.149.22.11   : 32500  | 6.6 plex | [cfDVR](https://24.149.22.11:32500)  | cf |
+|      24.149.22.11   : 32400  | 6.3 plex | [cfPlex](https://24.149.22.11:32400) on CFPlex win11 i7 | cf |
+|      24.149.22.11   : 32500  | 6.6 plex | [cfDVR](https://24.149.22.11:32500) on sg2 synology | cf |
+|      24.149.22.11   : 32600  | 6.30 plex | [cfTV](https://24.149.22.11:32600) on CyberTruck win10 i7 | cf |
 | test.christrees.com :  2020  | 6.2 ssh  | sg | cf |
 | test.christrees.com :  2021  | 6.6 ssh  | sg2 | cf |
-|      24.216.208.251 : 32400  | 0.6 plex | [slPlex](https://24.216.208.251:32400) | sl |
-|      24.216.208.251 : 32500  | 0.9 plex | [slDVR](https://24.216.208.251:32500) | sl |
+|      24.216.208.251 : 32400  | 0.6 plex | [slPlex](https://24.216.208.251:32400) on slwin11 win11 zeon | sl |
+|      24.216.208.251 : 32500  | 0.9 plex | [slDVR](https://24.216.208.251:32500) on sg2 QNAP | sl |
+
 
 ## port forward
 
 | External | Internal | IP | detail |
 |-------|-------|---------------|---|
-| 32400	| 32400	| 192.168.6.3 | [cfPlex](https://24.149.22.11:32400) on cfPlex win11 | 
-| 32500	| 32400	| 192.168.6.6 | [cfDVR](https://24.149.22.11:32500) on cfDVR ds-411 | 
+| 32400	| 32400	| 192.168.6.3 | [cfPlex](https://24.149.22.11:32400) on [cfPlex local](https://192.168.6.3:32400) win11 | 
+| 32500	| 32400	| 192.168.6.6 | [cfDVR](https://24.149.22.11:32500) on [cfDVR local](https://192.168.6.6:32400) ds-411 | 
+| 32600	| 32400	| 192.168.6.30 | [cfTV](https://24.149.22.11:32500) on [cfTV local](https://192.168.6.30:32400) Cybertruck | 
 |  2020 |    22 | 192.168.6.2 | ~~cf-sg2 truenas~~ disabled | 
 |  2021 |  2020 | 192.168.6.6 | cfDVR  | 
 
