@@ -49,9 +49,10 @@
 | catWorkstations | - | - | - | na |
 | [http://192.168.6.30/](http://192.168.6.30/) | ws | cybertruck | win10 i7 | 04:d9:f5:c8:c7:fc	|
 | [http://192.168.6.30:32400/](http://192.168.6.30:32400/) | cfTV | cybertruck plex | win10 i7 | 04:d9:f5:c8:c7:fc	|
-| [http://192.168.6.30:11434/](http://192.168.6.30:11434/) | cfTV | cybertruck ollama | win10 i7 | 04:d9:f5:c8:c7:fc	|
-| [http://192.168.6.30:8080/](http://192.168.6.30:8080/) | cfTV | cybertruck open-webui | win10 i7 | 04:d9:f5:c8:c7:fc	|
-| [http://192.168.6.30:20200/](http://192.168.6.30:20200/) | cfTV | cybertruck casaos | win10 i7 | 04:d9:f5:c8:c7:fc	|
+| [http://192.168.6.30:11434/](http://192.168.6.30:11434/) | cybertruck | cybertruck ollama | win10 i7 wsl | 04:d9:f5:c8:c7:fc	|
+| [http://192.168.6.30:8080/](http://192.168.6.30:8080/) | cybertruck | cybertruck open-webui | win10 i7 wsl | 04:d9:f5:c8:c7:fc	|
+| [http://192.168.6.30:20200/](http://192.168.6.30:20200/) | cybertruck | cybertruck casaos | win10 i7 wsl | 04:d9:f5:c8:c7:fc	|
+| [https://192.168.6.30:9443/](https://192.168.6.30:9443/) | cybertruckk | cybertruck portainer | win10 i7 wsl | 04:d9:f5:c8:c7:fc	|
 | [http://192.168.6.31/](http://192.168.6.31/) | ws | win11catvm | win11vm-cfPlex | 08:00:27:f1:c6:ee	|
 | [http://192.168.6.32/](http://192.168.6.32/) | ws | catSurface | win10 i5 | 28:18:78:b7:be:b7	|
 | [http://192.168.6.33/](http://192.168.6.33/) | ws | cats-Mac-mini | macOSX i7 | 3c:07:54:72:49:e2	|
