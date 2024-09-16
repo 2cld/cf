@@ -31,18 +31,18 @@
 | [http://192.168.6.2/](http://192.168.6.2/) | sg | truenas  [storage gateway netstack](https://netstack.org/docs/lan/storage/) on i3 | cf:sg  | b0:83:fe:65:80:80 |
 | [http://192.168.6.2:81/](http://192.168.6.2:81/) | sg | truenas admin  [storage admin netstack](http://192.168.6.2:81) on i3 | cf:sg  | b0:83:fe:65:80:80 |
 | [http://192.168.6.2:30092/](http://192.168.6.2:30092/) or [home](https://home.klopfenstein.org/) | sg | homer truenas app on i3 | cf:sg  | b0:83:fe:65:80:80 |
-| [http://192.168.6.2:30008/](http://192.168.6.2:30008/) or [Fred](https://fred.klopfenstein.org/)| sg | gitea truenas app on i3 | cf:sg  | b0:83:fe:65:80:80 |
-| [http://192.168.6.2:30013/](http://192.168.6.2:30013/) | sg | jellyfin truenas app on i3 | cf:sg  | b0:83:fe:65:80:80 |
-| [http://192.168.6.3/](http://192.168.6.3/) | cg | win11  [compute gateway netstack](https://netstack.org/docs/lan/compute/) cfPlex (win11) subnet | cg hardware (Hyper-V) | 10:C3:7B:46:0C:ED |
+| [http://192.168.6.2:30008/](http://192.168.6.2:30008/) or [gitea](https://gitea.klopfenstein.org/) | sg | gitea truenas app on i3 | cf:sg  | b0:83:fe:65:80:80 |
+| [http://192.168.6.2:30013/](http://192.168.6.2:30013/) local only | sg | jellyfin truenas app on i3 | cf:sg  | b0:83:fe:65:80:80 |
+| [http://192.168.6.3/](http://192.168.6.3/) local only | cg | win11  [compute gateway netstack](https://netstack.org/docs/lan/compute/) cfPlex (win11) subnet | cg hardware (Hyper-V) | 10:C3:7B:46:0C:ED |
 | res | - | - | - | na |
 | [http://192.168.6.4/](http://192.168.6.4/) | - | - | - | 00:00:00:00:00:04 |
 | [http://192.168.6.5/](http://192.168.6.5/) | - | - | - | 00:00:00:00:00:05 |
 | ns2 | - | - | backup | na |
-| [http://192.168.6.6:5000/ buadmin](http://192.168.6.6:5000/) | cfDVR | cf:sg2 on ds411 synology | cf:sg2 | 00:11:32:08:c4:24 |
-| [http://192.168.6.7:8006/](http://192.168.6.7:8006/) | sg2.cf.2cld.net | proxmox 8.1.4 | - | 00:00:00:00:00:xx |
-| [https://192.168.6.8/](https://192.168.6.8/) | bg | truenas old gh-garage | backup not running | 00:30:48:c7:82:b2 |
-| [https://192.168.6.9/](https://192.168.6.9/) | dg | git | vm on cg2 not running | 02:30:48:35:ea:a0 |
-| [http://192.168.6.10:5000/ nsadmin](http://192.168.6.10:5000/) | nas | cfbu | cf | 00:11:32:12:b4:ed|
+| [http://192.168.6.6:5000/ buadmin](http://192.168.6.6:5000/) local only | cfDVR | cf:sg2 on ds411 synology | cf:sg2 | 00:11:32:08:c4:24 |
+| ~~[http://192.168.6.7:8006/](http://192.168.6.7:8006/)~~ local only inactive| sg2.cf.2cld.net | proxmox 8.1.4 | - | 00:00:00:00:00:xx |
+| ~~[https://192.168.6.8/](https://192.168.6.8/)~~ local only inactive | bg | truenas old gh-garage | backup not running | 00:30:48:c7:82:b2 |
+| ~~[https://192.168.6.9/](https://192.168.6.9/)~~ local only inactive | dg | git | vm on cg2 not running | 02:30:48:35:ea:a0 |
+| [http://192.168.6.10:5000/ nsadmin](http://192.168.6.10:5000/) local only | nas | cfbu | cf | 00:11:32:12:b4:ed|
 | Plex | - | - | - | na |
 | [https://192.168.6.3:32400/ local](https://192.168.6.3:32400/) | plex | [cfPlex remote](https://24.149.22.11:32400) | cf:cg on cfPlex i7 win11 | 10:C3:7B:46:0C:ED |
 | [https://192.168.6.6:32400/ local](https://192.168.6.6:32400/) | plex | [cfDVR remote](https://24.149.22.11:32500) | cf:cg on cfDVR synology ds411 | 00:11:32:08:c4:242 |
@@ -52,12 +52,12 @@
 |---------------------|---------|-------------|-------------|-----|
 | catWorkstations | - | - | - | na |
 | [http://192.168.6.30/](http://192.168.6.30/) | ws | cybertruck | win10 i7 | 04:d9:f5:c8:c7:fc	|
-| [http://192.168.6.30:32400/](http://192.168.6.30:32400/) | cfTV | cybertruck plex | win10 i7 | 04:d9:f5:c8:c7:fc	|
-| [http://192.168.6.30:11434/](http://192.168.6.30:11434/) | cybertruck | cybertruck ollama | win10 i7 wsl | 04:d9:f5:c8:c7:fc	|
-| [http://192.168.6.30:8080/](http://192.168.6.30:8080/) | cybertruck | cybertruck open-webui | win10 i7 wsl | 04:d9:f5:c8:c7:fc	|
+| [http://192.168.6.30:32400/](http://192.168.6.30:32400/) or [cfTV](https://24.149.22.11:32600) | cfTV | cybertruck plex | win10 i7 | 04:d9:f5:c8:c7:fc	|
+| [http://192.168.6.30:11434/](http://192.168.6.30:11434/) local only | cybertruck | cybertruck ollama | win10 i7 wsl | 04:d9:f5:c8:c7:fc	|
+| [http://192.168.6.30:8080/](http://192.168.6.30:8080/) or []() | cybertruck | cybertruck open-webui | win10 i7 wsl | 04:d9:f5:c8:c7:fc	|
 | [http://192.168.6.30:20200/](http://192.168.6.30:20200/) | cybertruck | cybertruck casaos | win10 i7 wsl | 04:d9:f5:c8:c7:fc	|
 | [http://192.168.6.30:9443/](http://192.168.6.30:9443/) | cybertruck | cybertruck portainer | win10 i7 wsl | 04:d9:f5:c8:c7:fc	|
-| [http://192.168.6.30:8888/](http://192.168.6.30:8888/)  | cybertruck | cybertruck portainer | win10 i7 wsl | 04:d9:f5:c8:c7:fc	|
+| [http://192.168.6.30:8888/](http://192.168.6.30:8888/) [Fred](https://fred.klopfenstein.org/) | cybertruck | cybertruck guacamole | win10 i7 wsl | 04:d9:f5:c8:c7:fc	|
 | [http://192.168.6.31/](http://192.168.6.31/) | ws | win11catvm | win11vm-cfPlex | 08:00:27:f1:c6:ee	|
 | [http://192.168.6.32/](http://192.168.6.32/) | ws | catSurface | win10 i5 | 28:18:78:b7:be:b7	|
 | [http://192.168.6.33/](http://192.168.6.33/) | ws | cats-Mac-mini | macOSX i7 | 3c:07:54:72:49:e2	|
