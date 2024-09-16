@@ -22,13 +22,17 @@
 |  2020 |    22 | 192.168.6.2 | ~~cf-sg2 truenas~~ disabled | 
 |  2021 |  2020 | 192.168.6.6 | cfDVR  | 
 
-## Internal Service
+## Internal Service 
+- see https://one.dash.cloudflare.com/ network -> tunnels -> public hosts
 
 | ns service admin    | type    | description | location    | mac |
 |---------------------|---------|-------------|-------------|-----|
 | [http://192.168.6.1/](http://192.168.6.1/) | ng | 854G-1 [network gateway netstack](https://netstack.org/docs/lan/network/) on subnet | cf:ng | 48:77:46:F6:BD:93 |
 | [http://192.168.6.2/](http://192.168.6.2/) | sg | truenas  [storage gateway netstack](https://netstack.org/docs/lan/storage/) on i3 | cf:sg  | b0:83:fe:65:80:80 |
 | [http://192.168.6.2:81/](http://192.168.6.2:81/) | sg | truenas admin  [storage admin netstack](http://192.168.6.2:81) on i3 | cf:sg  | b0:83:fe:65:80:80 |
+| [http://192.168.6.2:30092/](http://192.168.6.2:30092/) or [home](https://home.klopfenstein.org/) | sg | homer truenas app on i3 | cf:sg  | b0:83:fe:65:80:80 |
+| [http://192.168.6.2:30008/](http://192.168.6.2:30008/) or [Fred](https://fred.klopfenstein.org/)| sg | gitea truenas app on i3 | cf:sg  | b0:83:fe:65:80:80 |
+| [http://192.168.6.2:30013/](http://192.168.6.2:30013/) | sg | jellyfin truenas app on i3 | cf:sg  | b0:83:fe:65:80:80 |
 | [http://192.168.6.3/](http://192.168.6.3/) | cg | win11  [compute gateway netstack](https://netstack.org/docs/lan/compute/) cfPlex (win11) subnet | cg hardware (Hyper-V) | 10:C3:7B:46:0C:ED |
 | res | - | - | - | na |
 | [http://192.168.6.4/](http://192.168.6.4/) | - | - | - | 00:00:00:00:00:04 |
@@ -52,7 +56,8 @@
 | [http://192.168.6.30:11434/](http://192.168.6.30:11434/) | cybertruck | cybertruck ollama | win10 i7 wsl | 04:d9:f5:c8:c7:fc	|
 | [http://192.168.6.30:8080/](http://192.168.6.30:8080/) | cybertruck | cybertruck open-webui | win10 i7 wsl | 04:d9:f5:c8:c7:fc	|
 | [http://192.168.6.30:20200/](http://192.168.6.30:20200/) | cybertruck | cybertruck casaos | win10 i7 wsl | 04:d9:f5:c8:c7:fc	|
-| [https://192.168.6.30:9443/](https://192.168.6.30:9443/) | cybertruckk | cybertruck portainer | win10 i7 wsl | 04:d9:f5:c8:c7:fc	|
+| [http://192.168.6.30:9443/](http://192.168.6.30:9443/) | cybertruck | cybertruck portainer | win10 i7 wsl | 04:d9:f5:c8:c7:fc	|
+| [http://192.168.6.30:8888/](http://192.168.6.30:8888/)  | cybertruck | cybertruck portainer | win10 i7 wsl | 04:d9:f5:c8:c7:fc	|
 | [http://192.168.6.31/](http://192.168.6.31/) | ws | win11catvm | win11vm-cfPlex | 08:00:27:f1:c6:ee	|
 | [http://192.168.6.32/](http://192.168.6.32/) | ws | catSurface | win10 i5 | 28:18:78:b7:be:b7	|
 | [http://192.168.6.33/](http://192.168.6.33/) | ws | cats-Mac-mini | macOSX i7 | 3c:07:54:72:49:e2	|
