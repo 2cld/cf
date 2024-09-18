@@ -14,4 +14,12 @@
 | [https://gitea.klopfenstein.org](https://gitea.klopfenstein.org) | gitea |
 | [https://fred.klopfenstein.org](https://fred.klopfenstein.org) | guac |
 
+## Internal
+
+| url | service |
+|---|---|
+| [https://192.168.6.30:9443/](https://192.168.6.30:9443/) | portainer |
+| [http://192.168.6.2:30013/](http://192.168.6.2:30013/) | jellyfin |
+| [http://192.168.6.2:30092/](http://192.168.6.2:30092/) | homer |
+
 
