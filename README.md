@@ -7,12 +7,12 @@
 | url | service |
 |---|---|
 | [https://chat.bradnordyke.com](https://chat.bradnordyke.com) | ollama open-webui |
-| [https://home.bradnordyke.com](https://home.bradnordyke.com) | homer |
 | [https://casa.bradnordyke.com](https://casa.bradnordyke.com) | casaos |
-| [https://test.bradnordyke.com](https://test.bradnordyke.com) | na |
+| [https://test.bradnordyke.com](https://test.bradnordyke.com) | homepage |
 |---|---|
 | [https://gitea.klopfenstein.org](https://gitea.klopfenstein.org) | gitea |
 | [https://fred.klopfenstein.org](https://fred.klopfenstein.org) | guac |
+| [https://home.klopfenstein.org](https://home.klopfenstein.org) | homer |
 
 ## Internal
 
