@@ -14,7 +14,7 @@
 | External | Internal | IP | detail |
 |-------|-------|---------------|---|
 | 51821	| 51821	| 192.168.0.3 | wg tbd | 
-|  2020 |    22 | 192.168.0.3 | ~~cf-sg2 truenas~~ disabled | 
+|  2020 |    22 | 192.168.0.2 | ~~wf-sg truenas~~ disabled | 
 
 ## Internal Service 
 - see https://one.dash.cloudflare.com/ network -> tunnels -> public hosts
@@ -22,11 +22,9 @@
 | ns service admin    | type    | description | location    | mac |
 |---------------------|---------|-------------|-------------|-----|
 | [http://192.168.0.1/](http://192.168.0.1/) | ng | 854G-1 [network gateway netstack](https://netstack.org/docs/lan/network/) on subnet | wf:ng | 70:F1:96:95:E4:91 |
-| [http://192.168.0.2/](http://192.168.0.2/) | sg | truenas  [storage gateway netstack](https://netstack.org/docs/lan/storage/) on i3 | cf:sg  | b0:83:fe:65:80:80 |
-| [http://192.168.0.2:81/](http://192.168.0.2:81/) | sg | truenas admin  [storage admin netstack](http://192.168.6.2:81) on i3 | cf:sg  | b0:83:fe:65:80:80 |
-| [http://192.168.0.3:30092/](http://192.168.0.3:30092/) or [home](https://home.klopfenstein.org/) | sg | homer truenas app on i3 | cf:sg  | b0:83:fe:65:80:80 |
-| [http://192.168.0.3:30008/](http://192.168.0.3:30008/) or [gitea](https://gitea.klopfenstein.org/) | sg | gitea truenas app on i3 | cf:sg  | b0:83:fe:65:80:80 |
-| [http://192.168.0.2:30013/](http://192.168.0.2:30013/) local only | sg | jellyfin truenas app on i3 | cf:sg  | b0:83:fe:65:80:80 |
+| [http://192.168.0.2/](http://192.168.0.2/) | sg | truenas  [storage gateway netstack](https://netstack.org/docs/lan/storage/) on macci i3 | wf:sg  | na |
+| [http://192.168.0.2:81/](http://192.168.0.2:81/) | sg | truenas admin [storage admin netstack](http://192.168.6.2:81) on macci i3 | wf:sg  | na |
+| [https://192.168.0.3:8006/](https://192.168.0.3:8006/) | cg | proxmox admin [cg - proxmox ui](https://192.168.0.3:8006/) on macci i3 | wf:cg  | na |
 
 | Service admin link | description |
 |---|---|
