@@ -7,6 +7,7 @@
 |------------------------------|------|-------------|-------------|
 |      69.40.112.118   : 51821  | wg | [tbd]() | wf |
 | wf.christrees.com :  2020  | 0.3 ssh  | cg | wf |
+| ]https://logger.trink.com/](https://logger.trink.com/) | cli logs | dg | hb |
 
 
 ## port forward
