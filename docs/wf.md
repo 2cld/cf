@@ -25,6 +25,9 @@
 | [http://192.168.0.2/](http://192.168.0.2/) | sg | truenas  [storage gateway netstack](https://netstack.org/docs/lan/storage/) on macci i3 | wf:sg  | na |
 | [http://192.168.0.2:81/](http://192.168.0.2:81/) | sg | truenas admin [storage admin netstack](http://192.168.6.2:81) on macci i3 | wf:sg  | na |
 | [https://192.168.0.3:8006/](https://192.168.0.3:8006/) | cg | proxmox admin [cg - proxmox ui](https://192.168.0.3:8006/) on macci i3 | wf:cg  | na |
+|---------------------|---------|-------------|-------------|-----|
+| [http://192.168.0.30/](http://192.168.0.30/) | ws | casaos proxmox-lvm on macci i3 | wf:ws  | na |
+| [http://192.168.0.30:xxx/](http://192.168.0.30:xxx/) | ws | portainser on casaos on macci i3 | wf:ws  | na |
 
 | Service admin link | description |
 |---|---|
