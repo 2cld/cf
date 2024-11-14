@@ -28,15 +28,15 @@
 | ns service admin    | type    | description | location    | mac |
 |---------------------|---------|-------------|-------------|-----|
 | [http://192.168.6.1/](http://192.168.6.1/) | ng | 854G-1 [network gateway netstack](https://netstack.org/docs/lan/network/) on subnet | cf:ng | 48:77:46:F6:BD:93 |
-| [http://192.168.6.2/](http://192.168.6.2/) | sg | truenas  [storage gateway netstack](https://netstack.org/docs/lan/storage/) on i3 | cf:sg  | b0:83:fe:65:80:80 |
-| [http://192.168.6.2:81/](http://192.168.6.2:81/) | sg | truenas admin  [storage admin netstack](http://192.168.6.2:81) on i3 | cf:sg  | b0:83:fe:65:80:80 |
-| [http://192.168.6.2:30092/](http://192.168.6.2:30092/) or [home](https://home.klopfenstein.org/) | sg | homer truenas app on i3 | cf:sg  | b0:83:fe:65:80:80 |
-| [http://192.168.6.2:30008/](http://192.168.6.2:30008/) or [gitea](https://gitea.klopfenstein.org/) | sg | gitea truenas app on i3 | cf:sg  | b0:83:fe:65:80:80 |
-| [http://192.168.6.2:30013/](http://192.168.6.2:30013/) local only | sg | jellyfin truenas app on i3 | cf:sg  | b0:83:fe:65:80:80 |
-| [http://192.168.6.3/](http://192.168.6.3/) local only | cg | win11  [compute gateway netstack](https://netstack.org/docs/lan/compute/) cfPlex (win11) subnet | cg hardware (Hyper-V) | 10:C3:7B:46:0C:ED |
+| ~~[http://192.168.6.2/](http://192.168.6.2/)~~ | sg | truenas  [storage gateway netstack](https://netstack.org/docs/lan/storage/) on i3 | cf:sg  | b0:83:fe:65:80:80 |
+| ~~[http://192.168.6.2:81/](http://192.168.6.2:81/)~~ | sg | truenas admin  [storage admin netstack](http://192.168.6.2:81) on i3 | cf:sg  | b0:83:fe:65:80:80 |
+| ~~[http://192.168.6.2:30092/](http://192.168.6.2:30092/)~~ | sg | homer truenas app on i3 | cf:sg  | b0:83:fe:65:80:80 |
+| ~~[http://192.168.6.2:30008/](http://192.168.6.2:30008/)~~ | sg | gitea truenas app on i3 | cf:sg  | b0:83:fe:65:80:80 |
+| ~~[http://192.168.6.2:30013/](http://192.168.6.2:30013/)~~ | sg | jellyfin truenas app on i3 | cf:sg  | b0:83:fe:65:80:80 |
+| ~~[http://192.168.6.3/](http://192.168.6.3/)~~ | cg | win11  [compute gateway netstack](https://netstack.org/docs/lan/compute/) cfPlex (win11) subnet | cg hardware (Hyper-V) | 10:C3:7B:46:0C:ED |
 | res | - | - | - | na |
-| [http://192.168.6.4/](http://192.168.6.4/) | - | - | - | 00:00:00:00:00:04 |
-| [http://192.168.6.5/](http://192.168.6.5/) | - | - | - | 00:00:00:00:00:05 |
+| ~~[http://192.168.6.4/](http://192.168.6.4/)~~ | - | - | - | 00:00:00:00:00:04 |
+| ~~[http://192.168.6.5/](http://192.168.6.5/)~~ | - | - | - | 00:00:00:00:00:05 |
 | ns2 | - | - | backup | na |
 | [http://192.168.6.6:5000/ buadmin](http://192.168.6.6:5000/) | cfDVR-admin | cf:sg2 on ds411 synology | cf:sg2 | 00:11:32:08:c4:24 |
 | [http://192.168.6.6:3000/ nsadmin](http://192.168.6.6:3000/) | cfDVR-gitea | cf:sg2 on ds411 synology | cf:sg2 | 00:11:32:08:c4:24 |
