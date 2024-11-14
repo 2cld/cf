@@ -55,8 +55,8 @@
 |---------------------|---------|-------------|-------------|-----|
 | catWorkstations | - | - | - | na |
 | [http://192.168.6.30/](http://192.168.6.30/) | ws | cybertruck | win10 i7 | 04:d9:f5:c8:c7:fc	|
-| plex [http://192.168.6.30:32400/](http://192.168.6.30:32400/) | cfTV | [Plex - cfTV](https://24.149.22.11:32600) | win10 i7 | 04:d9:f5:c8:c7:fc	|
-| olama [http://192.168.6.30:11434/](http://192.168.6.30:11434/) local only | cybertruck | cybertruck ollama | win10 i7 wsl | 04:d9:f5:c8:c7:fc	|
+| plex-cfTV [http://192.168.6.30:32400/](http://192.168.6.30:32400/) | cfTV | [Plex - cfTV](https://24.149.22.11:32600) | win10 i7 | 04:d9:f5:c8:c7:fc	|
+| ollama [http://192.168.6.30:11434/](http://192.168.6.30:11434/) | cybertruck | cybertruck ollama | win10 i7 wsl | 04:d9:f5:c8:c7:fc	|
 | open-webui [http://192.168.6.30:8080/](http://192.168.6.30:8080/) | cybertruck | [https://chat.bradnordyke.com/](https://chat.bradnordyke.com/) | win10 i7 wsl | 04:d9:f5:c8:c7:fc	|
 | ~~[http://192.168.6.30:20200/](http://192.168.6.30:20200/)~~ | cybertruck | cybertruck casaos | win10 i7 wsl | 04:d9:f5:c8:c7:fc	|
 | portainer [http://192.168.6.30:9443/](http://192.168.6.30:9443/) | cybertruck | cybertruck portainer | win10 i7 wsl | 04:d9:f5:c8:c7:fc	|
