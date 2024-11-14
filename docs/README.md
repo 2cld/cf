@@ -16,7 +16,7 @@
 
 | External | Internal | IP | detail |
 |-------|-------|---------------|---|
-| 32400	| 32400	| 192.168.6.3 | [cfPlex](https://24.149.22.11:32400) on [cfPlex local](https://192.168.6.3:32400) win11 | 
+| 32400	| 32400	| 192.168.6.3 | ~~[cfPlex](https://24.149.22.11:32400)~~ on ~~[cfPlex local](https://192.168.6.3:32400)~~ win11 | 
 | 32500	| 32400	| 192.168.6.6 | [cfDVR](https://24.149.22.11:32500) on [cfDVR local](https://192.168.6.6:32400) ds-411 | 
 | 32600	| 32400	| 192.168.6.30 | [cfTV](https://24.149.22.11:32500) on [cfTV local](https://192.168.6.30:32400) Cybertruck | 
 |  2020 |    22 | 192.168.6.2 | ~~cf-sg2 truenas~~ disabled | 
@@ -46,8 +46,9 @@
 | ~~[https://192.168.6.9/](https://192.168.6.9/)~~ local only inactive | dg | git | vm on cg2 not running | 02:30:48:35:ea:a0 |
 | [http://192.168.6.10:5000/ nsadmin](http://192.168.6.10:5000/) local only | nas | cfbu | cf | 00:11:32:12:b4:ed|
 | Plex | - | - | - | na |
-| [https://192.168.6.3:32400/ local](https://192.168.6.3:32400/) | plex | [cfPlex remote](https://24.149.22.11:32400) | cf:cg on cfPlex i7 win11 | 10:C3:7B:46:0C:ED |
-| [https://192.168.6.6:32400/ local](https://192.168.6.6:32400/) | plex | [cfDVR remote](https://24.149.22.11:32500) | cf:cg on cfDVR synology ds411 | 00:11:32:08:c4:242 |
+| ~~[https://192.168.6.3:32400/](https://192.168.6.3:32400/)~~ | plex | [cfPlex remote](https://24.149.22.11:32400) | cf:cg on cfPlex i7 win11 | 10:C3:7B:46:0C:ED |
+| [https://192.168.6.6:32400/](https://192.168.6.6:32400/) | plex | [cfDVR remote](https://24.149.22.11:32500) | cf:cg on cfDVR synology ds411 | 00:11:32:08:c4:242 |
+| [http://192.168.6.30:32400/](http://192.168.6.30:32400/) | cfTV | [Plex - cfTV](https://24.149.22.11:32600) | win10 i7 | 04:d9:f5:c8:c7:fc	|
 | [http://192.168.6.11/](http://192.168.6.11/) | tuner | [HDHR-1080AD03](http://192.168.6.11/) | cf:tvswitch | 00:18:dd:08:0a:d0 |
 | [http://192.168.6.12/](http://192.168.6.12/) | tv | FireTVMain | cf:wifi | 48:43:dd:74:f1:72	|
 | [http://192.168.6.13/](http://192.168.6.13/) | tv | FireTVcat | cf:wifi | a4:08:01:60:57:35	|
