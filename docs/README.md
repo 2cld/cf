@@ -54,12 +54,12 @@
 |---------------------|---------|-------------|-------------|-----|
 | catWorkstations | - | - | - | na |
 | [http://192.168.6.30/](http://192.168.6.30/) | ws | cybertruck | win10 i7 | 04:d9:f5:c8:c7:fc	|
-| plex [http://192.168.6.30:32400/](http://192.168.6.30:32400/) or [Plex - cfTV](https://24.149.22.11:32600) | cfTV | cybertruck plex | win10 i7 | 04:d9:f5:c8:c7:fc	|
+| plex [http://192.168.6.30:32400/](http://192.168.6.30:32400/) | cfTV | [Plex - cfTV](https://24.149.22.11:32600) | win10 i7 | 04:d9:f5:c8:c7:fc	|
 | olama [http://192.168.6.30:11434/](http://192.168.6.30:11434/) local only | cybertruck | cybertruck ollama | win10 i7 wsl | 04:d9:f5:c8:c7:fc	|
-| open-webui [http://192.168.6.30:8080/](http://192.168.6.30:8080/) or [https://chat.bradnordyke.com/](https://chat.bradnordyke.com/) | cybertruck | cybertruck open-webui | win10 i7 wsl | 04:d9:f5:c8:c7:fc	|
-| [http://192.168.6.30:20200/](http://192.168.6.30:20200/) | cybertruck | cybertruck casaos | win10 i7 wsl | 04:d9:f5:c8:c7:fc	|
+| open-webui [http://192.168.6.30:8080/](http://192.168.6.30:8080/) | cybertruck | [https://chat.bradnordyke.com/](https://chat.bradnordyke.com/) | win10 i7 wsl | 04:d9:f5:c8:c7:fc	|
+| ~~[http://192.168.6.30:20200/](http://192.168.6.30:20200/)~~ | cybertruck | cybertruck casaos | win10 i7 wsl | 04:d9:f5:c8:c7:fc	|
 | portainer [http://192.168.6.30:9443/](http://192.168.6.30:9443/) | cybertruck | cybertruck portainer | win10 i7 wsl | 04:d9:f5:c8:c7:fc	|
-| [http://192.168.6.30:8888/](http://192.168.6.30:8888/) [Fred](https://fred.klopfenstein.org/) | cybertruck | cybertruck guacamole | win10 i7 wsl | 04:d9:f5:c8:c7:fc	|
+| [http://192.168.6.30:8888/](http://192.168.6.30:8888/) | cybertruck | [Fred -guacamole](https://fred.klopfenstein.org/) | win10 i7 wsl | 04:d9:f5:c8:c7:fc	|
 | [http://192.168.6.31/](http://192.168.6.31/) | ws | win11catvm | win11vm-cfPlex | 08:00:27:f1:c6:ee	|
 | [http://192.168.6.32/](http://192.168.6.32/) | ws | catSurface | win10 i5 | 28:18:78:b7:be:b7	|
 | [http://192.168.6.33/](http://192.168.6.33/) | ws | cats-Mac-mini | macOSX i7 | 3c:07:54:72:49:e2	|
