@@ -3,7 +3,7 @@
 
 | External Service             | type | description | location    |
 |------------------------------|------|-------------|-------------|
-|      24.149.22.11   : 32400  | 6.3 plex | [cfPlex](https://24.149.22.11:32400) on CFPlex win11 i7 | cf |
+|      24.149.22.11   : 32400  | 6.3 plex | [cfPlex](https://24.149.22.11:32400) on CFPlex win11 i7 | cf ip changed 2024/12/?? |
 |      24.149.22.11   : 32500  | 6.6 plex | [cfDVR](https://24.149.22.11:32500) on sg2 synology | cf |
 |      24.149.22.11   : 32600  | 6.30 plex | [cfTV](https://24.149.22.11:32600) on CyberTruck win10 i7 | cf |
 | test.christrees.com :  2020  | 6.2 ssh  | sg | cf |
