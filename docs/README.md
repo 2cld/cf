@@ -1,6 +1,6 @@
 [edit](https://github.com/2cld/cf/edit/master/docs/README.md)
 
-- [ng2 - network map](./ng2)
+- [ng2 - network map](./ng2.md)
 - [tbd]()
   
 # Network Map
