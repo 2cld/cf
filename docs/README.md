@@ -2,29 +2,74 @@
 
 - [ng2 - network map](./ng2/)
 - [tbd]()
+
   
+# cf.2cld.net at Fletch
+
+## 192.168.6.1 Devices
+
+| name | IP | mac |
+|-|--------------|-------------------|
+| | 192.168.6.13 | 5c:0f:fb:0c:78:c6 |
+| | 192.168.6.14 | 5c:0f:fb:0c:7c:5c |
+| | 192.168.6.18 | 5c:0f:fb:0c:7c:6c |
+| R6400 | 192.168.6.15 | dc:ef:09:a6:0b:99 |
+| | 192.168.6.12 | 00:03:e6:f0:fe:ee |
+| REV_A1000000 | 192.168.6.19 | 60:6c:63:22:78:a3 |
+| | 192.168.6.16 | 5c:0f:fb:0c:7a:72 |
+| pfSense | 192.168.6.47 | 00:15:5d:06:1e:02 |
+| Cybertruck | 192.168.6.30 | 04:d9:f5:c8:c7:fc |
+| cfub2204vm | 192.168.6.34 | 00:15:5d:06:1e:00 |
+| cfDVR | 192.168.6.67 | 00:11:32:08:c4:24 |
+| HDHR-1080AD03 | 192.168.6.48 | 00:18:dd:08:0a:d0 | 
+| win11vm | 192.168.6.49 | 00:15:5d:06:1e:01 | 
+| cfbu | 192.168.6.51 | 00:11:32:12:b4:ed | 
+
+| ns service admin    | type    | description | location    | mac |
+|---------------------|---------|-------------|-------------|-----|
+| [http://192.168.6.1/](http://192.168.6.1/) | ng | 854G-1 [network gateway netstack](https://netstack.org/docs/lan/network/) on subnet | cf:ng | 48:77:46:F6:BD:93 |
+| ~~[http://192.168.6.5/](http://192.168.6.5/)~~ | - | - | - | 00:00:00:00:00:05 |
+| ns2 | - | - | backup | na |
+| [http://192.168.6.67:5000/ buadmin](http://192.168.6.6:5000/) | cfDVR-admin | cf:sg2 on ds411 synology | cf:sg2 | 00:11:32:08:c4:24 |
+| [http://192.168.6.67:3000/ nsadmin](http://192.168.6.6:3000/) | cfDVR-gitea | cf:sg2 on ds411 synology | cf:sg2 | 00:11:32:08:c4:24 |
+| [http://192.168.6.67:8081/](http://192.168.6.6:8081/) | cfDVR-metube | cf:sg2 on ds411 synology | cf:sg2 | 00:11:32:08:c4:24 |
+| [http://192.168.6.51:5000/ nsadmin](http://192.168.6.51:5000/) local only | nas | cfbu | cf | 00:11:32:12:b4:ed |
+| Plex | - | - | - | na |
+| [http://192.168.6.30:32400/](http://192.168.6.30:32400/) | cfTV | [Plex - cfTV](https://24.149.22.11:32600) | win10 i7 | 04:d9:f5:c8:c7:fc	|
+| [http://192.168.6.48/](http://192.168.6.48/) | tuner | [HDHR-1080AD03](http://192.168.6.48/) | cf:tvswitch | 00:18:dd:08:0a:d0 |
+|---------------------|---------|-------------|-------------|-----|
+| CyberTruck win10 i7 | - | - | - | na |
+| CyberTruck---w10os [http://192.168.6.30/](http://192.168.6.30/) | ws | cybertruck | win10 i7 | 04:d9:f5:c8:c7:fc	|
+| plex-cfTV----w10os [http://192.168.6.30:32400/](http://192.168.6.30:32400/) | cfTV | [Plex - cfTV](https://24.149.22.11:32600) | win10 i7 | 04:d9:f5:c8:c7:fc	|
+| ollama-------w10os [http://192.168.6.30:11434/](http://192.168.6.30:11434/) | cybertruck | cybertruck ollama | win10 i7 wsl | 04:d9:f5:c8:c7:fc	|
+| portainer-wls-dker [http://192.168.6.30:9443/](http://192.168.6.30:9443/) | cybertruck | cybertruck portainer | win10 i7 wsl | 04:d9:f5:c8:c7:fc	|
+| OI------wls-docker [http://192.168.6.30:8080/](http://192.168.6.30:8080/) | cybertruck | [https://chat.bradnordyke.com/](https://chat.bradnordyke.com/) | | Workstations | - | - | - | na |
+| [http://192.168.6.31/](http://192.168.6.49/) | ws | hv-CyberTruck | win11vm | 00:15:5d:06:1e:01	|
+| other | - | - | - | na |
+
+
+
 # Network Map
 
 | External Service             | type | description | location    |
 |------------------------------|------|-------------|-------------|
-|      24.149.22.11   : 32400  | 6.3 plex | [cfPlex](https://24.149.22.11:32400) on CFPlex win11 i7 | cf ip changed 2024/12/?? |
-|      24.149.22.11   : 32500  | 6.6 plex | [cfDVR](https://24.149.22.11:32500) on sg2 synology | cf |
-|      24.149.22.11   : 32600  | 6.30 plex | [cfTV](https://24.149.22.11:32600) on CyberTruck win10 i7 | cf |
-| test.christrees.com :  2020  | 6.2 ssh  | sg | cf |
-| test.christrees.com :  2021  | 6.6 ssh  | sg2 | cf |
+|      ~~24.149.22.11   : 32400~~  | 6.3 plex | [cfPlex](https://24.149.22.11:32400) on CFPlex win11 i7 | cf ip changed 2024/12/?? |
+|      ~~24.149.22.11   : 32500~~  | 6.6 plex | [cfDVR](https://24.149.22.11:32500) on sg2 synology | cf |
+|      ~~24.149.22.11   : 32600~~  | 6.30 plex | [cfTV](https://24.149.22.11:32600) on CyberTruck win10 i7 | cf |
+| ~~test.christrees.com~~ :  2020  | 6.2 ssh  | sg | cf |
+| ~~test.christrees.com~~ :  2021  | 6.6 ssh  | sg2 | cf |
 |      24.216.208.251 : 32400  | 0.6 plex | [slPlex](https://24.216.208.251:32400) on slwin11 win11 zeon | sl |
 |      24.216.208.251 : 32500  | 0.9 plex | [slDVR](https://24.216.208.251:32500) on sg2 QNAP | sl |
-
 
 ## port forward
 
 | External | Internal | IP | detail |
 |-------|-------|---------------|---|
-| 32400	| 32400	| 192.168.6.3 | ~~[cfPlex](https://24.149.22.11:32400)~~ on ~~[cfPlex local](https://192.168.6.3:32400)~~ win11 | 
-| 32500	| 32400	| 192.168.6.6 | [cfDVR](https://24.149.22.11:32500) on [cfDVR local](https://192.168.6.6:32400) ds-411 | 
-| 32600	| 32400	| 192.168.6.30 | [cfTV](https://24.149.22.11:32500) on [cfTV local](https://192.168.6.30:32400) Cybertruck | 
-|  2020 |    22 | 192.168.6.2 | ~~cf-sg2 truenas~~ disabled | 
-|  2021 |  2020 | 192.168.6.6 | cfDVR  | 
+| ~~32400~~	| 32400	| 192.168.6.3 | ~~[cfPlex](https://24.149.22.11:32400)~~ on ~~[cfPlex local](https://192.168.6.3:32400)~~ win11 | 
+| ~~32500~~	| 32400	| 192.168.6.6 | [cfDVR](https://24.149.22.11:32500) on [cfDVR local](https://192.168.6.6:32400) ds-411 | 
+| ~~32600~~	| 32400	| 192.168.6.30 | [cfTV](https://24.149.22.11:32500) on [cfTV local](https://192.168.6.30:32400) Cybertruck | 
+|  ~~2020~~ |    22 | 192.168.6.2 | ~~cf-sg2 truenas~~ disabled | 
+|  ~~2021~~ |  2020 | 192.168.6.6 | cfDVR  | 
 
 ## Internal Service 
 - see https://one.dash.cloudflare.com/ network -> tunnels -> public hosts
