@@ -1,5 +1,10 @@
 [edit](https://github.com/2cld/cf/edit/master/docs/README.md)
 
+
+- [services](./services)
+- [services/cg2](./services/cg2)
+
+
 - [ng2 - network map](./ng2/)
 - [tbd]()
 
