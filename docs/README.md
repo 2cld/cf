@@ -5,7 +5,7 @@
 - [services/cg2](./services/cg2)
 
 
-- [ng2 - network map](./ng2/)
+- [ng2 - network map](./ng2)
 - [tbd]()
 
   
