@@ -44,12 +44,13 @@
 | [http://10.147.17.219:32400/](http://10.147.17.219:32400/) | cfTV | ~~[Plex - cfTV](https://24.149.22.11:32600)~~ | win10 i7 | 04:d9:f5:c8:c7:fc	|
 | [http://192.168.6.48/](http://192.168.6.48/) | tuner | [HDHR-1080AD03](http://192.168.6.48/) | cf:tvswitch | 00:18:dd:08:0a:d0 |
 |---------------------|---------|-------------|-------------|-----|
-| CyberTruck win10 i7 | - | - | - | na |
+| CyberTruck win10 i7 128G GPU | - | - | - | na |
 | CyberTruck---w10os [http://192.168.6.30/](http://192.168.6.30/) | ws | cybertruck | win10 i7 | 04:d9:f5:c8:c7:fc	|
 | plex-cfTV----w10os [http://192.168.6.30:32400/](http://192.168.6.30:32400/) | cfTV | [Plex - cfTV](https://24.149.22.11:32600) | win10 i7 | 04:d9:f5:c8:c7:fc	|
 | ollama-------w10os [http://192.168.6.30:11434/](http://192.168.6.30:11434/) | cybertruck | cybertruck ollama | win10 i7 wsl | 04:d9:f5:c8:c7:fc	|
 | portainer-wls-dker [http://192.168.6.30:9443/](http://192.168.6.30:9443/) | cybertruck | cybertruck portainer | win10 i7 wsl | 04:d9:f5:c8:c7:fc	|
-| OI------wls-docker [http://192.168.6.30:8080/](http://192.168.6.30:8080/) | cybertruck | [https://chat.bradnordyke.com/](https://chat.bradnordyke.com/) | | Workstations | - | - | - | na |
+| OI------wls-docker [http://192.168.6.30:8080/](http://192.168.6.30:8080/) | cybertruck | [https://chat.bradnordyke.com/](https://chat.bradnordyke.com/) | | - | - | - | - | na |
+| RT------wls-docker [http://192.168.6.30:3333/](http://192.168.6.30:3333/) | cybertruck | [https://rt.bradnordyke.com/](https://rt.bradnordyke.com/) | | - | - | - | - | na |
 | [http://192.168.6.31/](http://192.168.6.49/) | ws | hv-CyberTruck | win11vm | 00:15:5d:06:1e:01	|
 | other | - | - | - | na |
 
