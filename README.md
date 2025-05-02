@@ -12,6 +12,7 @@
 | [https://rt.bradnordyke.com](https://rt.bradnordyke.com) | rust test ->[cflare](https://dash.cloudflare.com/)->ct-hv-wsl |
 | [https://ssh.bradnordyke.com](https://ssh.bradnordyke.com) | ssh ->[cflare](https://dash.cloudflare.com/)->ct-hv-wsl ct gmail |
 | [https://metube.bradnordyke.com](https://metube.bradnordyke.com) | metube ->[cflare](https://dash.cloudflare.com/)->sfDVR-docker ct gmail |
+| [https://sg2.bradnordyke.com](https://sg2.bradnordyke.com) | sg2 ->[cflare](https://dash.cloudflare.com/)->ng->ng2-sg2 ct gmail |
 |---|---|
 | [https://gitea.klopfenstein.org](https://gitea.klopfenstein.org) | gitea ->[cflare](https://dash.cloudflare.com/)->cfDVR-docker-gitea |
 |---|---|
