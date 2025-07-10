@@ -10,8 +10,7 @@
 
   
 # cf.2cld.net at Fletch
-
-<span style="color: red;">ct-HyperV</span>
+- IP Chicken 192.111.21.62
 
 ## 192.168.6.1 Devices
 
@@ -24,10 +23,10 @@
 | | 192.168.6.16 | 5c:0f:fb:0c:7a:72 |
 | | 192.168.6.18 | 5c:0f:fb:0c:7c:6c |
 | REV_A1000000 | 192.168.6.19 | 60:6c:63:22:78:a3 |
-| ~~pfSense~~ <span style="color: red;">ct-HyperV</span> | 192.168.6.47 | 00:15:5d:06:1e:02 |
+| ~~pfSense~~ ct-HyperV | 192.168.6.47 | 00:15:5d:06:1e:02 |
 | Cybertruck | 192.168.6.30 | 04:d9:f5:c8:c7:fc |
 | offline ~~cfub2204vm~~ ct-HyperV | 192.168.6.34 | 00:15:5d:06:1e:00 |
-| offline ~~cfDVR~~ | 192.168.6.67 Synology | 00:11:32:08:c4:24 |
+| offline ~~cfDVR~~ Synology | 192.168.6.67 | 00:11:32:08:c4:24 |
 | HDHR-1080AD03 SiliconDust | 192.168.6.48 | 00:18:dd:08:0a:d0 | 
 | offline ~~win11vm~~ ct-HyperV | 192.168.6.49 | 00:15:5d:06:1e:01 | 
 | offline ~~cfbu~~ synology | 192.168.6.51 | 00:11:32:12:b4:ed |
@@ -39,24 +38,24 @@
 | ~~[http://192.168.6.5/](http://192.168.6.5/)~~ | - | - | - | 00:00:00:00:00:05 |
 | ns2 | - | - | backup | na |
 | ~~[http://192.168.6.67:5000/ buadmin](http://192.168.6.67:5000/)~~ | cfDVR-admin | cf:sg2 on ds411 synology | cf:sg2 | 00:11:32:08:c4:24 |
-| ~~[http://192.168.6.67:3000/ nsadmin](http://192.168.6.67:3000/~~) | cfDVR-gitea | cf:sg2 on ds411 synology | cf:sg2 | 00:11:32:08:c4:24 |
+| ~~[http://192.168.6.67:3000/ nsadmin](http://192.168.6.67:3000/)~~ | cfDVR-gitea | cf:sg2 on ds411 synology | cf:sg2 | 00:11:32:08:c4:24 |
 | ~~[https://gitea.klopfenstein.org/ cat](https://gitea.klopfenstein.org/)~~ | cfDVR-gitea via cflare | cf:sg2 on ds411 synology | cf:sg2 | 00:11:32:08:c4:24 |
 | ~~[http://192.168.6.67:8081/](http://192.168.6.67:8081/)~~ | cfDVR-metube | cf:sg2 on ds411 synology | cf:sg2 | 00:11:32:08:c4:24 |
 | ~~[https://metube.bradnordyke.com/](https://metube.bradnordyke.com/)~~ | cfDVR-metube via cflare | cf:sg2 on ds411 synology | cf:sg2 | 00:11:32:08:c4:24 |
 | ~~[http://192.168.6.51:5000/ nsadmin](http://192.168.6.51:5000/)~~ local only | nas | cfbu | cf | 00:11:32:12:b4:ed |
 | Plex | - | - | - | na |
-| [http://192.168.6.30:32400/](http://192.168.6.30:32400/) | [cfTV](https://app.plex.tv/desktop/#!/) | ~~[Plex - cfTV](https://24.149.22.11:32600)~~ | win10 i7 | 04:d9:f5:c8:c7:fc	|
-| [http://10.147.17.219:32400/](http://10.147.17.219:32400/) | [cfTV](https://app.plex.tv/desktop/#!/) | ~~[Plex - cfTV](https://24.149.22.11:32600)~~ | win10 i7 | 04:d9:f5:c8:c7:fc	|
+| [http://192.168.6.30:32400/](http://192.168.6.30:32400/) | [cfTV](https://app.plex.tv/desktop/#!/) | na | win10 i7 | 04:d9:f5:c8:c7:fc	|
+| [http://10.147.17.219:32400/](http://10.147.17.219:32400/) | [cfTV](https://app.plex.tv/desktop/#!/) | na | win10 i7 | 04:d9:f5:c8:c7:fc	|
 | [http://192.168.6.48/](http://192.168.6.48/) | tuner | [HDHR-1080AD03](http://192.168.6.48/) | cf:tvswitch | 00:18:dd:08:0a:d0 |
 |---------------------|---------|-------------|-------------|-----|
 | CyberTruck win10 i7 128G GPU | - | - | - | na |
 | CyberTruck---w10os [http://192.168.6.30/](http://192.168.6.30/) | ws | cybertruck | win10 i7 | 04:d9:f5:c8:c7:fc	|
-| plex-cfTV----w10os [http://192.168.6.30:32400/](http://192.168.6.30:32400/) | cfTV | [Plex - cfTV](https://24.149.22.11:32600) | win10 i7 | 04:d9:f5:c8:c7:fc	|
-| ollama-------w10os [http://192.168.6.30:11434/](http://192.168.6.30:11434/) | cybertruck | cybertruck ollama | win10 i7 wsl | 04:d9:f5:c8:c7:fc	|
-| portainer-wls-dker [http://192.168.6.30:9443/](http://192.168.6.30:9443/) | cybertruck | cybertruck portainer | win10 i7 wsl | 04:d9:f5:c8:c7:fc	|
-| OI------wls-docker [http://192.168.6.30:8080/](http://192.168.6.30:8080/) | cybertruck | [https://chat.bradnordyke.com/](https://chat.bradnordyke.com/) | | - | - | - | - | na |
-| RT------wls-docker [http://192.168.6.30:3333/](http://192.168.6.30:3333/) | cybertruck | [https://rt.bradnordyke.com/](https://rt.bradnordyke.com/) | | - | - | - | - | na |
-| [http://192.168.6.31/](http://192.168.6.49/) | ws | hv-CyberTruck | win11vm | 00:15:5d:06:1e:01	|
+| plex-cfTV----w10os [http://192.168.6.30:32400/](http://192.168.6.30:32400/) | cfTV | na | win10 i7 | 04:d9:f5:c8:c7:fc	|
+| ollama-------w10os ~~[http://192.168.6.30:11434/](http://192.168.6.30:11434/)~~ | cybertruck | cybertruck ollama | win10 i7 wsl | 04:d9:f5:c8:c7:fc	|
+| portainer-wls-dker ~~[http://192.168.6.30:9443/](http://192.168.6.30:9443/)~~ | cybertruck | cybertruck portainer | win10 i7 wsl | 04:d9:f5:c8:c7:fc	|
+| OI------wls-docker ~~[http://192.168.6.30:8080/](http://192.168.6.30:8080/)~~ | cybertruck | ~~[https://chat.bradnordyke.com/](https://chat.bradnordyke.com/)~~ | | - | - | - | - | na |
+| RT------wls-docker ~~[http://192.168.6.30:3333/](http://192.168.6.30:3333/)~~ | cybertruck | ~~[https://rt.bradnordyke.com/](https://rt.bradnordyke.com/)~~ | | - | - | - | - | na |
+| ~~[http://192.168.6.31/](http://192.168.6.49/)~~ | ws | hv-CyberTruck | win11vm | 00:15:5d:06:1e:01	|
 | other | - | - | - | na |
 
 
