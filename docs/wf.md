@@ -1,13 +1,13 @@
 # wf
 
-[edit]()
+[edit](https://github.com/2cld/cf/edit/master/docs/wf.md)
 # Network Map
 
 | External Service             | type | description | location    |
 |------------------------------|------|-------------|-------------|
 |      69.40.112.118   : 51821  | wg | [tbd]() | wf |
 | wf.christrees.com :  2020  | 0.3 ssh  | cg | wf |
-| ]https://logger.trink.com/](https://logger.trink.com/) | cli logs | dg | hb |
+| [https://logger.trink.com/](https://logger.trink.com/) | cli logs | dg | hb |
 
 
 ## port forward
@@ -22,14 +22,17 @@
 
 | ns service admin    | type    | description | location    | mac |
 |---------------------|---------|-------------|-------------|-----|
-| [http://192.168.0.1/](http://192.168.0.1/) | ng | 854G-1 [network gateway netstack](https://netstack.org/docs/lan/network/) on subnet | wf:ng | 70:F1:96:95:E4:91 |
-| [http://192.168.0.2/](http://192.168.0.2/) | sg | truenas  [storage gateway netstack](https://netstack.org/docs/lan/storage/) on macci i3 | wf:sg  | na |
-| [http://192.168.0.2:81/](http://192.168.0.2:81/) | sg | truenas admin [storage admin netstack](http://192.168.6.2:81) on macci i3 | wf:sg  | na |
-| [https://192.168.0.3:8006/](https://192.168.0.3:8006/) | cg | proxmox admin [cg - proxmox ui](https://192.168.0.3:8006/) on macci i3 | wf:cg  | na |
+| [http://192.168.9.1/](http://192.168.9.1/) | ng | mikrotik [network gateway netstack](https://netstack.org/docs/lan/network/) on subnet | wf:ng | xx |
+| ~~[http://192.168.9.2/](http://192.168.9.2/)~~ | sg | truenas  [storage gateway netstack](https://netstack.org/docs/lan/storage/) on na | wf:sg  | na |
+| ~~[http://192.168.9.2:81/](http://192.168.9.2:81/)~~ | sg | truenas admin [storage admin netstack](http://192.168.6.2:81) on macci i3 | wf:sg  | na |
+| [https://192.168.9.3:8006/](https://192.168.9.3:8006/) | cg | proxmox admin [cg - proxmox ui](https://192.168.9.3:8006/) on macci i3 | wf:cg  | na |
 |---------------------|---------|-------------|-------------|-----|
+| [http://192.168.9.195/](http://192.168.9.195/) | ws | devwin10 | wf:ws  | na |
 | [http://192.168.0.30/](http://192.168.0.30/) | ws | casaos proxmox-lvm on macci i3 | wf:ws  | na |
 | [http://192.168.0.30:xxx/](http://192.168.0.30:xxx/) | ws | portainser on casaos on macci i3 | wf:ws  | na |
 
+
+## old windstream
 | Service admin link | description |
 |---|---|
 | [Windstream - T3200 - http://192.168.0.1/](http://192.168.0.1/) | wf pop router |
