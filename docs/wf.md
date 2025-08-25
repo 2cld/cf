@@ -16,6 +16,8 @@
 |-------|-------|---------------|---|
 | 51821	| 51821	| 192.168.0.3 | wg tbd | 
 |  2020 |    22 | 192.168.0.2 | ~~wf-sg truenas~~ disabled | 
+| xx | xx | 100.113.125.255/10 | Public |
+| xx | xx | 192.168.4.1/24 | starlink |
 
 ## Internal Service 
 - see https://one.dash.cloudflare.com/ network -> tunnels -> public hosts
@@ -27,12 +29,12 @@
 | ~~[http://192.168.9.2:81/](http://192.168.9.2:81/)~~ | sg | truenas admin [storage admin netstack](http://192.168.6.2:81) on macci i3 | wf:sg  | na |
 | [https://192.168.9.3:8006/](https://192.168.9.3:8006/) | cg | proxmox admin [cg - proxmox ui](https://192.168.9.3:8006/) on macci i3 | wf:cg  | na |
 |---------------------|---------|-------------|-------------|-----|
+| [https://192.168.9.11:3000/](https://192.168.9.11:3000/) | gitea | 100-docker | wf:ns | na |
 | [https://192.168.9.11:9443/](https://192.168.9.11:9443/) | portainer | 100-docker | wf:ns | na |
+| [https://192.168.9.11:9090/](https://192.168.9.11:9090/) | cockpit | 100-docker | wf:ns | na |
 |---------------------|---------|-------------|-------------|-----|
 | [http://192.168.9.195/](http://192.168.9.195/) | ws | devwin10 | wf:ws  | na |
 | [https://192.168.9.102:9090/](https://192.168.9.102:9090/) | ws | llscat | wf:ws | na |
-| [http://192.168.0.30/](http://192.168.0.30/) | ws | casaos proxmox-lvm on macci i3 | wf:ws  | na |
-| [http://192.168.0.30:xxx/](http://192.168.0.30:xxx/) | ws | portainser on casaos on macci i3 | wf:ws  | na |
 
 
 ## old windstream
