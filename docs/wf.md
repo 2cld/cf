@@ -14,10 +14,8 @@
 
 | External | Internal | IP | detail |
 |-------|-------|---------------|---|
-| 51821	| 51821	| 192.168.0.3 | wg tbd | 
-|  2020 |    22 | 192.168.0.2 | ~~wf-sg truenas~~ disabled | 
 | xx | xx | 100.113.125.255/10 | Public |
-| xx | xx | 192.168.4.1/24 | starlink |
+| xx | xx | [192.168.4.1/24](http://192.168.9.1/) | starlink |
 
 ## Internal Service 
 - see https://one.dash.cloudflare.com/ network -> tunnels -> public hosts
