@@ -31,19 +31,25 @@
 | ng [DHCP Leases](http://192.168.9.1/webfig/#IP:DHCP_Server.Leases) | ng | mikrotik DHCP Leases | wf:ng | xx |
 | ng [DHCP Used](http://192.168.9.1/webfig/#IP:Pool.Used_Addresses) | ng | mikrotik DHCP used | wf:ng | xx |
 | ng [WiFi mt-wifi](http://192.168.9.1/webfig/#Wireless.Security_Profiles) | ng | mikrotik mt-wifi | wf:ng | xx |
+|---------------------|---------|-------------|-------------|-----|
 | [http://192.168.9.2/](http://192.168.9.2/) sg-ip | sg | sg  [storage gateway netstack](https://netstack.org/docs/lan/storage/) on synology | wf:sg  | na |
-| sg [synology AdminPortal:5000/](http://192.168.9.2:5000/) | sg | sg admin portal on synology | wf:sg  | na |
+| sg [synology AdminPortal:5000/](http://192.168.9.2:5000/) | sg | sg buadmin portal on synology | wf:sg  | na |
+| sg PkgInstDocker [gitea:3000/](http://192.168.9.2:3000/) | sg | sg gitea portal on synology | wf:sg  | na |
+| sg PkgInstDocker [cf-metube:8081/](http://192.168.9.2:8081/) | sg | sg cf-metube portal on synology | wf:sg  | na |
+| sg PkgInstDocker [plextube:34200/](http://192.168.9.2:34200/) | sg | sg plextube portal on synology | wf:sg  | na |
+|---------------------|---------|-------------|-------------|-----|
 | [https://192.168.9.3/](https://192.168.9.3/) cg-ip  | cg | proxmox admin [cg - proxmox ui](https://192.168.9.3:8006/) on ASUS i5 | wf:cg  | na |
 | cg [proxmox AdmionPortal:8006/](https://192.168.9.3:8006/) | cg | proxmox admin [cg - proxmox ui](https://192.168.9.3:8006/) on ASUS i5 | wf:cg  | na |
+| cg-vm [https://192.168.9.11:3000/](https://192.168.9.11:3000/) | gitea | 100-docker-vm proxmox | wf:ns | na |
+| cg-vm [https://192.168.9.11:9443/](https://192.168.9.11:9443/) | portainer | 100-docker-vm proxmox | wf:ns | na |
+| cg-vm [https://192.168.9.11:9090/](https://192.168.9.11:9090/) | cockpit | 100-docker-vm proxmox | wf:ns | na |
+| cg-vm [https://192.168.9.102:9090/](https://192.168.9.102:9090/) | ws | llscat cockpit portal | wf:ws | na |
 |---------------------|---------|-------------|-------------|-----|
-| [https://192.168.9.11:3000/](https://192.168.9.11:3000/) | gitea | 100-docker | wf:ns | na |
-| [https://192.168.9.11:9443/](https://192.168.9.11:9443/) | portainer | 100-docker | wf:ns | na |
-| [https://192.168.9.11:9090/](https://192.168.9.11:9090/) | cockpit | 100-docker | wf:ns | na |
-|---------------------|---------|-------------|-------------|-----|
-| [http://192.168.9.195/](http://192.168.9.195/) | ws | devwin10 | wf:ws  | na |
-| [https://192.168.9.102:9090/](https://192.168.9.102:9090/) | ws | llscat | wf:ws | na |
+| [http://192.168.9.195/](http://192.168.9.195/) ws-ip | ws | devwin10 | wf:ws  | na |
 
-http://192.168.9.196:5000/
+
+---
+---
 
 ## old windstream
 | Service admin link | description |
