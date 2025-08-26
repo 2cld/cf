@@ -5,17 +5,22 @@
 
 | External Service             | type | description | location    |
 |------------------------------|------|-------------|-------------|
-|      69.40.112.118   : 51821  | wg | [tbd]() | wf |
+|   69.40.112.118   : 51821  | wg | [tbd]() | wf |
 | wf.christrees.com :  2020  | 0.3 ssh  | cg | wf |
 | [https://logger.trink.com/](https://logger.trink.com/) | cli logs | dg | hb |
 
 
-## port forward
+## local connect
 
 | External | Internal | IP | detail |
 |-------|-------|---------------|---|
 | xx | xx | 100.113.125.255/10 | Public |
-| xx | xx | [192.168.4.1/24](http://192.168.9.1/) | starlink |
+| xx | xx | [192.168.4.1/24](http://192.168.4.1/) | TreesAES starlink |
+| xx | xx | TreesAES | TreesAES 5G wifi |
+| xx | xx | IoTrees | IoTrees 5G wifi |
+| xx | xx | mt-wifi | mt-wifi mikrotik 5G wifi |
+| xx | xx | [192.168.4.165/24](http://192.168.4.165/) | iPhone - TreesAES 5G wifi phone app required to access router |
+
 
 ## Internal Service 
 - see https://one.dash.cloudflare.com/ network -> tunnels -> public hosts
@@ -23,6 +28,8 @@
 | ns service admin    | type    | description | location    | mac |
 |---------------------|---------|-------------|-------------|-----|
 | [http://192.168.9.1/](http://192.168.9.1/) | ng | mikrotik [network gateway netstack](https://netstack.org/docs/lan/network/) on subnet | wf:ng | xx |
+| ng [DHCP Leases](http://192.168.9.1/webfig/#IP:DHCP_Server.Leases) | ng | mikrotik DHCP Leases | wf:ng | xx |
+| ng [WiFi mt-wifi](http://192.168.9.1/webfig/#Wireless.Security_Profiles) | ng | mikrotik mt-wifi | wf:ng | xx |
 | ~~[http://192.168.9.2/](http://192.168.9.2/)~~ | sg | truenas  [storage gateway netstack](https://netstack.org/docs/lan/storage/) on na | wf:sg  | na |
 | ~~[http://192.168.9.2:81/](http://192.168.9.2:81/)~~ | sg | truenas admin [storage admin netstack](http://192.168.6.2:81) on macci i3 | wf:sg  | na |
 | [https://192.168.9.3:8006/](https://192.168.9.3:8006/) | cg | proxmox admin [cg - proxmox ui](https://192.168.9.3:8006/) on macci i3 | wf:cg  | na |
