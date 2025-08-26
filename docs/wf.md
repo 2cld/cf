@@ -27,12 +27,14 @@
 
 | ns service admin    | type    | description | location    | mac |
 |---------------------|---------|-------------|-------------|-----|
-| [http://192.168.9.1/](http://192.168.9.1/) | ng | mikrotik [network gateway netstack](https://netstack.org/docs/lan/network/) on subnet | wf:ng | xx |
+| [http://192.168.9.1/](http://192.168.9.1/) ng-ip  | ng | mikrotik [network gateway netstack](https://netstack.org/docs/lan/network/) on subnet | wf:ng | xx |
 | ng [DHCP Leases](http://192.168.9.1/webfig/#IP:DHCP_Server.Leases) | ng | mikrotik DHCP Leases | wf:ng | xx |
+| ng [DHCP Used](http://192.168.9.1/webfig/#IP:Pool.Used_Addresses) | ng | mikrotik DHCP used | wf:ng | xx |
 | ng [WiFi mt-wifi](http://192.168.9.1/webfig/#Wireless.Security_Profiles) | ng | mikrotik mt-wifi | wf:ng | xx |
-| ~~[http://192.168.9.2/](http://192.168.9.2/)~~ | sg | truenas  [storage gateway netstack](https://netstack.org/docs/lan/storage/) on na | wf:sg  | na |
-| ~~[http://192.168.9.2:81/](http://192.168.9.2:81/)~~ | sg | truenas admin [storage admin netstack](http://192.168.6.2:81) on macci i3 | wf:sg  | na |
-| [https://192.168.9.3:8006/](https://192.168.9.3:8006/) | cg | proxmox admin [cg - proxmox ui](https://192.168.9.3:8006/) on macci i3 | wf:cg  | na |
+| [http://192.168.9.2/](http://192.168.9.2/) sg-ip | sg | sg  [storage gateway netstack](https://netstack.org/docs/lan/storage/) on synology | wf:sg  | na |
+| sg [synology AdminPortal:5000/](http://192.168.9.2:5000/) | sg | sg admin portal on synology | wf:sg  | na |
+| [https://192.168.9.3/](https://192.168.9.3/) cg-ip  | cg | proxmox admin [cg - proxmox ui](https://192.168.9.3:8006/) on ASUS i5 | wf:cg  | na |
+| cg [proxmox AdmionPortal:8006/](https://192.168.9.3:8006/) | cg | proxmox admin [cg - proxmox ui](https://192.168.9.3:8006/) on ASUS i5 | wf:cg  | na |
 |---------------------|---------|-------------|-------------|-----|
 | [https://192.168.9.11:3000/](https://192.168.9.11:3000/) | gitea | 100-docker | wf:ns | na |
 | [https://192.168.9.11:9443/](https://192.168.9.11:9443/) | portainer | 100-docker | wf:ns | na |
@@ -41,6 +43,7 @@
 | [http://192.168.9.195/](http://192.168.9.195/) | ws | devwin10 | wf:ws  | na |
 | [https://192.168.9.102:9090/](https://192.168.9.102:9090/) | ws | llscat | wf:ws | na |
 
+http://192.168.9.196:5000/
 
 ## old windstream
 | Service admin link | description |
