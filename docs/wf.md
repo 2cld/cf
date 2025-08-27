@@ -36,9 +36,9 @@
 |---------------------|--|------|-------------|----|-----|
 | [http://192.168.9.2/](http://192.168.9.2/) sg-ip | [sg](https://netstack.org/docs/lan/storage/) | xx | sg  [storage gateway netstack](https://netstack.org/docs/lan/storage/) on synology | wf:sg  | 10.147.17.209 |
 | sg [synology AdminPortal:5000/](http://192.168.9.2:5000/) | [sg](https://netstack.org/docs/lan/storage/) | [sg.klopfenstein.org](https://sg.klopfenstein.org/) | sg buadmin portal | wf:sg  | [10.147.17.209:5000/](http://10.147.17.209:5000/) |
-| sg PkgInstDocker [gitea:3000/](http://192.168.9.2:3000/) | [sg](https://netstack.org/docs/lan/storage/) | [gitea.klopfenstein.org](https://gitea.klopfenstein.org/) | sg gitea portal | wf:sg  | [10.147.17.209:3000/](http://10.147.17.209:3000/) |
-| sg PkgInstDocker [cf-metube:8081/](http://192.168.9.2:8081/) | [sg](https://netstack.org/docs/lan/storage/) | [metube.klopfenstein.org](https://metube.klopfenstein.org/) | sg cf-metube portal | wf:sg  | [10.147.17.209:8081/](http://10.147.17.209:8081/) |
-| sg PkgInstDocker [plextube:32400/](http://192.168.9.2:32400/) | [sg](https://netstack.org/docs/lan/storage/) | xx | sg plextube portal on synology | wf:sg  | [10.147.17.209:32400/](http://10.147.17.209:32400/) |
+| sg dkr [gitea:3000/](http://192.168.9.2:3000/) | [sg](https://netstack.org/docs/lan/storage/) | [gitea.klopfenstein.org](https://gitea.klopfenstein.org/) | sg gitea portal | wf:sg  | [10.147.17.209:3000/](http://10.147.17.209:3000/) |
+| sg dkr [cf-metube:8081/](http://192.168.9.2:8081/) | [sg](https://netstack.org/docs/lan/storage/) | [metube.klopfenstein.org](https://metube.klopfenstein.org/) | sg cf-metube portal | wf:sg  | [10.147.17.209:8081/](http://10.147.17.209:8081/) |
+| sg dkr [plextube:32400/](http://192.168.9.2:32400/) | [sg](https://netstack.org/docs/lan/storage/) | xx | sg plextube portal on synology | wf:sg  | [10.147.17.209:32400/](http://10.147.17.209:32400/) |
 |---------------------|--|------|-------------|----|-----|
 | [https://192.168.9.3/](https://192.168.9.3/) cg-ip  | cg | xx | proxmox admin [cg - proxmox ui](https://192.168.9.3:8006/) on ASUS i5 | wf:cg  | na |
 | cg [proxmox AdminPortal:8006/](https://192.168.9.3:8006/) | cg | xx | proxmox admin [cg - proxmox ui](https://192.168.9.3:8006/) on ASUS i5 | wf:cg  | na |
