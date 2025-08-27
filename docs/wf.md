@@ -16,38 +16,38 @@
 |-------|-------|---------------|---|
 | xx | xx | 98.97.4.249 | Public |
 | xx | xx | ~~100.113.125.255/10~~ | ~~Public~~ old windstream |
-| xx | xx | [192.168.4.1/24](http://192.168.4.1/) | TreesAES starlink |
+| xx | xx | [192.168.4.1/24](http://192.168.4.1/) | TreesAES [starlink](https://www.starlink.com/) |
 | xx | xx | TreesAES | TreesAES 5G wifi |
 | xx | xx | IoTrees | IoTrees 2.5G wifi |
 | xx | xx | mt-wifi | mt-wifi mikrotik 5G wifi |
 | xx | xx | 192.168.4.165 | iPhone - TreesAES 5G wifi phone app required to access router |
-| xx | xx | 192.168.4.145 -> 192.168.9.1 | mikrotik - wired |
+| xx | xx | 192.168.4.145 -> 192.168.9.1 | [mikrotik](https://netstack.org/docs/lan/network/mikrotik/) - wired |
 
 
 ## Internal Service 
 - see https://one.dash.cloudflare.com/ network -> tunnels -> public hosts
 
-| ns service admin    | type    | description | location    | mac |
-|---------------------|---------|-------------|-------------|-----|
-| [http://192.168.9.1/](http://192.168.9.1/) ng-ip  | ng | mikrotik [network gateway netstack](https://netstack.org/docs/lan/network/) on subnet | wf:ng | xx |
-| ng [DHCP Leases](http://192.168.9.1/webfig/#IP:DHCP_Server.Leases) | ng | mikrotik DHCP Leases | wf:ng | xx |
-| ng [DHCP Used](http://192.168.9.1/webfig/#IP:Pool.Used_Addresses) | ng | mikrotik DHCP used | wf:ng | xx |
-| ng [WiFi mt-wifi](http://192.168.9.1/webfig/#Wireless.Security_Profiles) | ng | mikrotik mt-wifi | wf:ng | xx |
-|---------------------|---------|-------------|-------------|-----|
-| [http://192.168.9.2/](http://192.168.9.2/) sg-ip | sg | sg  [storage gateway netstack](https://netstack.org/docs/lan/storage/) on synology | wf:sg  | na |
-| sg [synology AdminPortal:5000/](http://192.168.9.2:5000/) | sg | sg buadmin portal [sg.klopfenstein.org](https://sg.klopfenstein.org/) | wf:sg  | na |
-| sg PkgInstDocker [gitea:3000/](http://192.168.9.2:3000/) | sg | sg gitea portal on [gitea.klopfenstein.org](https://gitea.klopfenstein.org/) | wf:sg  | na |
-| sg PkgInstDocker [cf-metube:8081/](http://192.168.9.2:8081/) | sg | sg cf-metube portal on [metube.klopfenstein.org](https://metube.klopfenstein.org/) | wf:sg  | na |
-| sg PkgInstDocker [plextube:34200/](http://192.168.9.2:34200/) | sg | sg plextube portal on synology | wf:sg  | na |
-|---------------------|---------|-------------|-------------|-----|
-| [https://192.168.9.3/](https://192.168.9.3/) cg-ip  | cg | proxmox admin [cg - proxmox ui](https://192.168.9.3:8006/) on ASUS i5 | wf:cg  | na |
-| cg [proxmox AdminPortal:8006/](https://192.168.9.3:8006/) | cg | proxmox admin [cg - proxmox ui](https://192.168.9.3:8006/) on ASUS i5 | wf:cg  | na |
-| cg-vm [https://192.168.9.11:3000/](https://192.168.9.11:3000/) | gitea | 100-docker-vm proxmox | wf:ns | na |
-| cg-vm [https://192.168.9.11:9443/](https://192.168.9.11:9443/) | portainer | 100-docker-vm proxmox | wf:ns | na |
-| cg-vm [https://192.168.9.11:9090/](https://192.168.9.11:9090/) | cockpit | 100-docker-vm proxmox | wf:ns | na |
-| cg-vm [https://192.168.9.102:9090/](https://192.168.9.102:9090/) | ws | llscat cockpit portal | wf:ws | na |
-|---------------------|---------|-------------|-------------|-----|
-| [http://192.168.9.195/](http://192.168.9.195/) ws-ip | ws | devwin10 | wf:ws  | na |
+| ns service admin    | ns | [cf](https://one.dash.cloudflare.com/) | description | location | [zt](https://my.zerotier.com/) |
+|---------------------|--|------|-------------|----|-----|
+| [http://192.168.9.1/](http://192.168.9.1/) ng-ip  | [ng](https://netstack.org/docs/lan/network/) | xx | [ns mikrotik](https://netstack.org/docs/lan/network/mikrotik/) on [network gateway netstack](https://netstack.org/docs/lan/network/) on subnet | wf:ng | xx |
+| ng [DHCP Leases](http://192.168.9.1/webfig/#IP:DHCP_Server.Leases) | [ng](https://netstack.org/docs/lan/network/) | xx | [mikrotik](https://netstack.org/docs/lan/network/mikrotik/) DHCP Leases | wf:ng | xx |
+| ng [DHCP Used](http://192.168.9.1/webfig/#IP:Pool.Used_Addresses) | [ng](https://netstack.org/docs/lan/network/) | xx | [mikrotik](https://netstack.org/docs/lan/network/mikrotik/) DHCP used | wf:ng | xx |
+| ng [WiFi mt-wifi](http://192.168.9.1/webfig/#Wireless.Security_Profiles) | [ng](https://netstack.org/docs/lan/network/) | xx | [mikrotik](https://netstack.org/docs/lan/network/mikrotik/) mt-wifi | wf:ng | xx |
+|---------------------|--|------|-------------|----|-----|
+| [http://192.168.9.2/](http://192.168.9.2/) sg-ip | [sg](https://netstack.org/docs/lan/storage/) | xx | sg  [storage gateway netstack](https://netstack.org/docs/lan/storage/) on synology | wf:sg  | 10.147.17.209 |
+| sg [synology AdminPortal:5000/](http://192.168.9.2:5000/) | [sg](https://netstack.org/docs/lan/storage/) | xx | sg buadmin portal [sg.klopfenstein.org](https://sg.klopfenstein.org/) | wf:sg  | [10.147.17.209:5000/](http://10.147.17.209:5000/) |
+| sg PkgInstDocker [gitea:3000/](http://192.168.9.2:3000/) | [sg](https://netstack.org/docs/lan/storage/) | xx | sg gitea portal on [gitea.klopfenstein.org](https://gitea.klopfenstein.org/) | wf:sg  | [10.147.17.209:3000/](http://10.147.17.209:3000/) |
+| sg PkgInstDocker [cf-metube:8081/](http://192.168.9.2:8081/) | [sg](https://netstack.org/docs/lan/storage/) | xx | sg cf-metube portal on [metube.klopfenstein.org](https://metube.klopfenstein.org/) | wf:sg  | [10.147.17.209:8081/](http://10.147.17.209:8081/) |
+| sg PkgInstDocker [plextube:32400/](http://192.168.9.2:32400/) | [sg](https://netstack.org/docs/lan/storage/) | xx | sg plextube portal on synology | wf:sg  | [10.147.17.209:32400/](http://10.147.17.209:32400/) |
+|---------------------|--|------|-------------|----|-----|
+| [https://192.168.9.3/](https://192.168.9.3/) cg-ip  | cg | xx | proxmox admin [cg - proxmox ui](https://192.168.9.3:8006/) on ASUS i5 | wf:cg  | na |
+| cg [proxmox AdminPortal:8006/](https://192.168.9.3:8006/) | cg | xx | proxmox admin [cg - proxmox ui](https://192.168.9.3:8006/) on ASUS i5 | wf:cg  | na |
+| cg-vm [https://192.168.9.11:3000/](https://192.168.9.11:3000/) | cg  | xx | gitea 100-docker-vm proxmox | wf:ns | na |
+| cg-vm [https://192.168.9.11:9443/](https://192.168.9.11:9443/) | cg  | xx | portainer 100-docker-vm proxmox | wf:ns | na |
+| cg-vm [https://192.168.9.11:9090/](https://192.168.9.11:9090/) | cg  | xx | cockpit 100-docker-vm proxmox | wf:ns | na |
+| cg-vm [https://192.168.9.102:9090/](https://192.168.9.102:9090/) | cg  | xx | ws llscat cockpit portal | wf:ws | na |
+|---------------------|--|------|-------------|----|-----|
+| [http://192.168.9.195/](http://192.168.9.195/) ws-ip | ws | xx | devwin10 | wf:ws  | 10.147.17.165 |
 
 
 ---
