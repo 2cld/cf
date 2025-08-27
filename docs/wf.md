@@ -14,12 +14,14 @@
 
 | External | Internal | IP | detail |
 |-------|-------|---------------|---|
-| xx | xx | 100.113.125.255/10 | Public |
+| xx | xx | 98.97.4.249 | Public |
+| xx | xx | ~~100.113.125.255/10~~ | ~~Public~~ old windstream |
 | xx | xx | [192.168.4.1/24](http://192.168.4.1/) | TreesAES starlink |
 | xx | xx | TreesAES | TreesAES 5G wifi |
-| xx | xx | IoTrees | IoTrees 5G wifi |
+| xx | xx | IoTrees | IoTrees 2.5G wifi |
 | xx | xx | mt-wifi | mt-wifi mikrotik 5G wifi |
-| xx | xx | [192.168.4.165/24](http://192.168.4.165/) | iPhone - TreesAES 5G wifi phone app required to access router |
+| xx | xx | 192.168.4.165 | iPhone - TreesAES 5G wifi phone app required to access router |
+| xx | xx | 192.168.4.145 -> 192.168.9.1 | mikrotik - wired |
 
 
 ## Internal Service 
