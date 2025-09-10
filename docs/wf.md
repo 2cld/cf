@@ -1,6 +1,6 @@
 # wf
+[newlink](https://github.com/2cld/wf/edit/master/docs/README.md)
 
-[edit](https://github.com/2cld/cf/edit/master/docs/wf.md)
 # Network Map
 
 | External Service             | type | description | location    |
