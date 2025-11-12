@@ -25,6 +25,10 @@
 | [cf](https://one.dash.cloudflare.com/830c41d5976453f0c03f34d4f765b229/networks/tunnels) sg2 url | service [zt](https://my.zerotier.com/network/d5e5fb65371eb4a4) |
 |---|---|
 | [https://gitea.klopfenstein.org](https://gitea.klopfenstein.org) | gitea ->[cflare](https://dash.cloudflare.com/)->cfDVR-docker-gitea |
+| [https://metube.klopfenstein.org/](https://metube.klopfenstein.org/) | xx |
+| [https://sg.klopfenstein.org/](https://sg.klopfenstein.org/) | xx |
+| [https://cg2.klopfenstein.org/](https://cg2.klopfenstein.org/) | xx |
+| [https://jp.klopfenstein.org/](https://jp.klopfenstein.org/) | xx |
 |---|---|
 | ~~[https://casa.bradnordyke.com](https://casa.bradnordyke.com)~~ | casaos |
 | ~~[https://test.bradnordyke.com](https://test.bradnordyke.com)~~ | homepage |
