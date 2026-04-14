@@ -1,0 +1,1302 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="SL Home Lab Infrastructure Documentation">
+      
+      
+      
+        <link rel="canonical" href="https://sl.2cld.net/docs/">
+      
+      
+        <link rel="prev" href="..">
+      
+      
+        <link rel="next" href="devices/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../favicon.ico">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
+    
+    
+      
+        <title>Overview - SL node</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.484c7ddc.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="slate" data-md-color-primary="blue-grey" data-md-color-accent="cyan">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#new-router-ipv6-1x" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="SL node" class="md-header__button md-logo" aria-label="SL node" data-md-component="logo">
+      
+  <img src="../favicon.ico" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            SL node
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Overview
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="SL node" class="md-nav__button md-logo" aria-label="SL node" data-md-component="logo">
+      
+  <img src="../favicon.ico" alt="logo">
+
+    </a>
+    SL node
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Documentation
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Documentation
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Overview
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="devices/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Devices
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="services/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Services
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="storage/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Storage
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Operations
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Operations
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ops/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Overview
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_2" id="__nav_3_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Install
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Install
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ops/install/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Overview
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ops/install/slwin11ops-notes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    slwin11ops
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ops/install/slwin11ops-hv-mg2-notes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    slwin11ops HV mg2
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ops/install/slwin11-notes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    slwin11
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ops/install/github-actions-workflow/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    GitHub Actions
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ops/backup/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Backup
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ops/rdp/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Remote
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<p><a href="https://github.com/2cld/sl/edit/main/docs/README.md">edit</a></p>
+<ul>
+<li><a href="devices/">devices.md</a></li>
+<li><a href="services/">services.md</a></li>
+<li><a href="storage/">storage.md</a></li>
+</ul>
+<h1 id="new-router-ipv6-1x">new router ipv6 - 1.x</h1>
+<ul>
+<li>24.216.208.255</li>
+<li>
+<p>2600:6c40:7006:200:1c0e:1976:ae6d:54a6
+| WAN MAC Address | IP Address | Subnet Mask | GW | DNS |
+|--|--|--|--|--|
+| 18-A6-F7-31-9C-07 | 192.168.1.236 | 255.255.255.0 | 192.168.1.1 | 8.8.8.8 , 71.10.216.2 |</p>
+</li>
+<li>
+<p>old pre ipv6</p>
+</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>External Services</th>
+<th>type</th>
+<th>description</th>
+<th>location</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>24.149.22.11   : 32400</td>
+<td>6.3 plex</td>
+<td><a href="https://24.149.22.11:32400">cfPlex</a></td>
+<td>cf</td>
+</tr>
+<tr>
+<td>24.149.22.11   : 32500</td>
+<td>6.6 plex</td>
+<td><a href="https://24.149.22.11:32500">cfDVR</a></td>
+<td>cf</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><a href="https://tv.2cld.net/">tv.2cld.net</a></li>
+<li><a href="https://cf.2cld.net/docs">cf.2cld.net/docs</a></li>
+<li><a href="https://sl.2cld.net/docs">sl.2cld.net/docs</a></li>
+<li><a href="https://netstack.org/docs/">netstack.org/docs</a></li>
+</ul>
+<h1 id="1x-0x-lan">1.x - 0.x LAN</h1>
+<ul>
+<li>pull from 192.168.0.1 DHCP clients
+Private 192.168.0.143 : 32400  Public 149.102.242.64 : 32400   Internet</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>ID</th>
+<th>Client Name</th>
+<th>MAC Address</th>
+<th>Assigned IP</th>
+<th>Lease Time</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>StevesRokuUltra</td>
+<td>8C-49-62-0B-69-8D</td>
+<td>192.168.0.14</td>
+<td>Permanent</td>
+</tr>
+<tr>
+<td>2</td>
+<td>TIVO-8480001902B1749</td>
+<td>00-11-D9-5F-47-82</td>
+<td>192.168.0.11</td>
+<td>Permanent</td>
+</tr>
+<tr>
+<td>3</td>
+<td>TIVO-8480001902B1749</td>
+<td>00-11-D9-5F-47-83</td>
+<td>192.168.0.15</td>
+<td>Permanent</td>
+</tr>
+<tr>
+<td>4</td>
+<td>TIVO-748000190569948</td>
+<td>00-11-D9-35-02-A8</td>
+<td>192.168.0.12</td>
+<td>Permanent</td>
+</tr>
+<tr>
+<td>5</td>
+<td>mg2</td>
+<td>00-15-5D-09-BF-02</td>
+<td>192.168.0.140</td>
+<td>01:23:22</td>
+</tr>
+<tr>
+<td>6</td>
+<td>gusHPLaptop</td>
+<td>00-23-8B-86-38-61</td>
+<td>192.168.0.23</td>
+<td>01:21:03</td>
+</tr>
+<tr>
+<td>7</td>
+<td>HDHR-10802956</td>
+<td>00-18-DD-08-02-95</td>
+<td>192.168.0.13</td>
+<td>Permanent</td>
+</tr>
+<tr>
+<td>8</td>
+<td>slwin11ops</td>
+<td>B0-83-FE-65-80-80</td>
+<td>192.168.0.143</td>
+<td>01:22:13</td>
+</tr>
+<tr>
+<td>9</td>
+<td>gusGram</td>
+<td>AC-74-B1-02-FB-CF</td>
+<td>192.168.0.28</td>
+<td>Permanent</td>
+</tr>
+<tr>
+<td>10</td>
+<td>TIVO-74600019083B6E2</td>
+<td>00-11-D9-38-0B-FC</td>
+<td>192.168.0.22</td>
+<td>Permanent</td>
+</tr>
+</tbody>
+</table>
+<h2 id="maintenance">Maintenance</h2>
+<ul>
+<li>Plex check <a href="https://24.149.22.11:32400">cfPlex</a> and <a href="https://24.149.22.11:32500">cfDVR</a></li>
+<li>Router check <a href="http://192.168.0.1/">http://192.168.0.1/</a></li>
+</ul>
+<h2 id="services">Services</h2>
+<ul>
+<li><a href="services/">services.md</a></li>
+<li>tbd</li>
+</ul>
+<!-- moved to services.md
+| Service admin Link  | type    | description | location    | mac |
+|---------------------|---------|-------------|-------------|-----|
+| - | ns | netstack [ns docs](https://netstack.org/docs/) | - | - |
+| [http://192.168.0.1/](http://192.168.0.1/) | ng | tp-link [AC1750 Archer C7 doc](https://static.tp-link.com/res/down/doc/Archer_C7_V1_UG.pdf) ng | sl gb | 18-A6-F7-31-9C-06 |
+| ~~[http://192.168.0.2/](http://192.168.2.2/)~~ | sg | nas sg | vm on cg | na |
+| ~~[https://192.168.0.3:8006/](https://192.168.0.3:8006/)~~ | cg | [root](https://192.168.0.3:8006/) proxmox cg | cg on i3 macmini hw | moved to cf |
+| - | ns2 | - | ns backup | na |
+| ~~[http://192.168.0.5/](http://192.168.0.5/)~~ | ng2 | backup network gw | sl gb | na |
+| [http://192.168.0.6:8080/](http://192.168.0.6:8080/) | sg2 | [buadmin](http://192.168.0.6:8080/) qnap sg2 5.3TB Raid 0.5TB Used | sl-sb-sw3p2 | 00-08-9B-E2-83-93 |
+| ~~[http://192.168.0.7:8006/](http://192.168.0.5/7:8006)~~ | cg2 | backup compute gw | sl gb | na |
+| Plex Services | - | - | - | na |
+| [https://192.168.0.9:32400/](https://192.168.0.9:32400/) | slDVR | [slDVR](https://24.216.208.251:32500) on slwin11 -zt-10.147.17.198 .25TB-C 1.8TB-D 1.8TB-E | win app | 00-15-17-5B-F2-80 |
+| [https://192.168.0.9:8123/](https://192.168.0.9:8123/) | ha | [HomeAssistant vm slwin11](https://192.168.0.9:8123/) on slwin11 -zt-10.147.17.198 .25TB-C 1.8TB-D 1.8TB-E | win app | 00-15-17-5B-F2-80 |
+|---------------------|---------|-------------|-------------|-----|
+| ~~[Gus - Dashboard CasaOS](http://192.168.0.70/)~~ | app |  vm slcg-100 | na | 08-00-27-84-49-45 |
+| ~~[Gus - Remote - Guacamole](http://192.168.0.70:8090/guacamole/#/)~~  | [ghadmin](http://192.168.0.70:8090/guacamole/#/) | casoOS app | na | 08-00-27-84-49-xx |
+| [Gus - HomeAssistant](192.168.0.9:8123) | ha | - | - | na |
+| sl proxmox vms |---------|-------------|-------------|-----|
+| ~~[http://192.168.0.70](http://192.168.0.70/)~~  | CasaOS | vm slcg-100 | sl | 08-00-27-84-49-45 |
+| ~~[http://192.168.0.71:8090](http://192.168.0.70:8090/guacamole/#/)~~  | Guacamole | casoos app | sl | 08-00-27-84-49-xx |
+| ~~[https://192.168.0.6:32400/](https://192.168.0.6:32400/)~~ | ~~slPlex~~ | ~~[slPlex](https://24.216.208.251:32400) on sg2~~ removed | vm sl-101 | 00-08-9B-E2-83-93 |
+| ~~[192.168.0.10:8123](http://192.168.0.10:8123/)~~  | ha | vm slwin11 | sl | 08-00-27-84-49-45 |
+| user machines | - | - | - | na |
+| 192.168.0.9  slwin11  | win11 | Dell 1U win11 zt-10.147.17.198 | sl | 00-15-17-5B-F2-80 |
+| 192.168.0.28 gusGram  | win11 | gus new laptop | sl | AC-74-B1-02-FB-CF | 
+| 192.168.0.23 gusHPLaptop  | win10 | gus old laptop | sl | 00-23-8B-86-38-61 | 
+-->
+
+<h2 id="storage">Storage</h2>
+<ul>
+<li><a href="storage/">storage.md</a></li>
+<li><a href="https://my.zerotier.com">my.zerotier.com</a> </li>
+<li>gusGram Windows 11 10.147.17.190 - 192.168.0.28</li>
+<li>tbd</li>
+</ul>
+<!--
+Below has Moved to [storage.md](./storage.md)
+| slDVR 10.147.17.198 /192.168.0.9 | Plex | Plex Libraries | location | size TB |
+|-----------------------------------|------|-------------|-------------|-----|
+| C: local | none | system | sl | 0.25 |
+| D: local | none  | local | sl | 1.81 |
+| E: local | none  | local | sl | 1.81 |
+| G: \\192.168.0.6\plex | slDVR | [gusHPlexG.md](./gusHPlexG) remoted storage | sl | 5.33 |
+| T: \\10.147.19.228\catDVR | cfPlex  | TrueNAS catbox in catpool storage | cf | 1.00 |
+## cfPlex Storage Mapping (10.147.17.228 - 192.168.6.2) from [https://cf.2cld.net/docs/](https://cf.2cld.net/docs/)
+| cfPlex 10.147.17.228 /192.168.6.2 | Plex | Plex Libraries | location | size TB |
+|-----------------------------------|------|-------------|-------------|-----|
+| C: local                          | none | none | cf | 0.90 |
+| D: \\10.147.19.198\slShareD       | none  | zt remote | sl | 1.81 |
+| E: \\10.147.19.198\slShareE       | none  | zt remote | sl | 1.81 |
+| ~~G: \\10.147.17.66\gusHPlexSFEPart~~ | gusHPlex | [gusHPlexG.md](./gusHPlexG) remoted storage | sl | 0.90 |
+| ~~H: \\192.168.6.2\ghpool~~       | cfPlex  | TrueNAS ghpool storage | cf | 0.90 |
+| ~~M: \\192.168.6.2\MediaShare~~   | cfPlex  | TrueNAS MediaShare storage | cf | 0.90 |
+| ~~N: \\192.168.6.2\catbox~~       | cfPlex  | TrueNAS catbox in catpool storage | cf | 0.90 |
+| O: \\192.168.6.10\plexnsds        | cfPlex  | [cfPlex0.md](./cfPlex0) StarTrek storage | cf | 1.78 |
+| P: \\192.168.6.6\pshare           | cfDVR | Synology NAS storage | cf | 10.0 |
+-->
+
+<h2 id="media-ethernet-devices">Media Ethernet Devices</h2>
+<ul>
+<li><a href="devices/">devices.md</a></li>
+<li>tbd</li>
+</ul>
+<!--
+| Network Name     | MAC Address-          | IP         | port  | description     | rm | link |
+|------------------|-----------------------|------------|-------|-----------------|--|------|
+|   na                   | na                | na           | sw1p0 | Spectrum Modem  | sr | |
+|   Archer_C7 switch 1 sr | 18-A6-F7-31-9C-07 | 192.168.0.1  |sw1int | TP-LINK AC1720  | sr | [admin](http://192.168.0.1/) |
+| switch 1 to 2        | living room switch lr | na      |sw1p4-sw2p5 | sw1-sw2        |sr-lr| |
+| switch 2 to 3        | basement switch bm    | na      |sw2p4-sw3p1 | sw2-sw3        |lr-bm| |
+| Steve Room |-----------------------|------------|-------|-----------------|----|------|
+|   ~~StevesRokuUltra~~ | 8C-49-62-0B-69-8C | 192.168.0.24 | ~~sw2p4~~ | StevesRokuUltra | sr | |
+|   StevesRokuUltra      | 8C-49-62-0B-69-8D | 192.168.0.14 | wifi  | StevesRokuUltra | sr | |
+|   TIVO-8480001902B1749 | 00-11-D9-5F-47-83 | 192.168.0.15 | wifi  | Steves640       | sr | |
+|   TIVO-8480001902B1749 | 00-11-D9-5F-47-82 | 192.168.0.11 | sw1p1 | Steves640       | sr | |
+| TIVO-748000190569948 | 00-11-D9-35-02-A8 | 192.168.0.12 | sw1p2 | Steves320       | sr | |
+|   HDHR-10802956          | 00-18-DD-08-02-95 | 192
+.168.0.13 | sw2p4 | plexTuner       | sr | [admin](http://192.168.0.13/) |
+| Living Room |-----------------------|--------------|-------|-----------------|----|------|
+|   ~~KathysRokuUltra~~  | 84-EA-ED-A8-64-9x | na           | wifi  | KathysRokuUltra | lr | |
+|   KathysRokuUltra      | 84-EA-ED-A8-64-91 | 192.168.0.21 | sw2p1 | KathysRokuUltra | lr | |
+|   TIVO-74600019083B6E2 | 00-11-D9-38-0B-FC | 192.168.0.22 | sw2p2 | Kathys160       | lr | |
+| gusHPLaptop          | 00-23-8B-86-38-61 | 192.168.0.23 | sw2p3 | gusHPLaptop win10 | lr | [gusHPlex](http://192.168.0.23:32400) ghadmin |
+| switch 2 to 3        | basement switch bm    | na      |sw2p4-sw3p1 | sw2-sw3        |lr-bm| |
+| gusGram              | AC-74-B1-02-FB-CF | 192.168.0.28 | wifi  | gusGram win11 i7 | lr | rmdesk ghadmin |
+|   Portal-8B57B421F784  | A4-0E-2B-4C-EF-C7 | 192.168.0.29 | wifi  | portaltv        | lr | |
+| pictureframe         | na                | na           | wifi  | picture frame   | lr | |
+| Basement         |-----------------------|------------|-------|-----------------|----|------|
+| switch 2 to 3        | basement switch bm    | na      | sw2p4-sw3p1 | sw2-sw3        |lr-bm| |
+|   sg2               | 00-08-9B-E2-83-93 | 192.168.0.6 | sw3p2 | [slPlex](https://192.168.0.6:32400)  | bm | [buadmin](http://192.168.0.6:8080/) |
+|   slwin11 on hw | 00-15-17-5B-F2-80 | 192.168.0.9 | sw3p3 |  [slDVR](https://192.168.0.9:32400)  | bm | sladmin ghadmin |
+|   ubunt22 vm on slwin11 | 08-00-27-00-5C-A0 | 192.168.0.10 | vswitch | not running  | vm | ubuntu22 ghadmin |
+| Basement temp |-----------------------|------------|-------|-----------------|----|------|
+|   cats-Mac-mini        | 7C-C3-A1-73-CC-A3 | 192.168.0.211 | sw3p4  | macmini  chris  | bm | cat ghadmin |
+|   catSurface             | 28-18-78-C7-FC-23 | 192.168.0.212 | sw3p5  | suface   chris  | bm | cat ghadmin |
+|   Pixel-6a               | 86-50-46-38-28-96 | 192.168.0.213 | wifi  | Pixel-6a chris  | bm | |
+| FireTV cube          | A4-08-01-60-57-35 | 192.168.0.214 | wifi  | FireTV   chris  | bm | |
+-->
+
+<h2 id="coax">Coax</h2>
+<table>
+<thead>
+<tr>
+<th>Coax name</th>
+<th>source</th>
+<th>destination</th>
+<th>locations</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>ant feed</td>
+<td>main ant</td>
+<td>coax amp</td>
+<td>attic to basement</td>
+</tr>
+<tr>
+<td>spl01 feed</td>
+<td>coax amp</td>
+<td>spl01</td>
+<td>basement</td>
+</tr>
+<tr>
+<td>sr feed</td>
+<td>spl01</td>
+<td>spl02</td>
+<td>basement to sr</td>
+</tr>
+<tr>
+<td>Steves320 feed</td>
+<td>spl02p1</td>
+<td>Steves320 Tivo ant</td>
+<td>sr</td>
+</tr>
+<tr>
+<td>plexTuner feed</td>
+<td>spl02p2</td>
+<td>plexTuner ant</td>
+<td>sr</td>
+</tr>
+<tr>
+<td>Kathys160 feed</td>
+<td>spl02p3</td>
+<td>Kathys160 ant</td>
+<td>lr</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>Coax name</th>
+<th>source</th>
+<th>destination</th>
+<th>locations</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>cable feed</td>
+<td>main cable</td>
+<td>spl03 input</td>
+<td>sr</td>
+</tr>
+<tr>
+<td>spl03 feed</td>
+<td>spl03p1</td>
+<td>spectrum modem</td>
+<td>sr</td>
+</tr>
+<tr>
+<td>spl04 feed</td>
+<td>spl03p2</td>
+<td>spl04 input</td>
+<td>sr</td>
+</tr>
+<tr>
+<td>Steves640 feed</td>
+<td>spl04p1</td>
+<td>Steves320 Tivo cable</td>
+<td>sr</td>
+</tr>
+<tr>
+<td>Kathys160 feed</td>
+<td>spl04p2</td>
+<td>Kathys160 cable</td>
+<td>sr</td>
+</tr>
+<tr>
+<td>?? feed</td>
+<td>spl04p3</td>
+<td>?? cable</td>
+<td>sr</td>
+</tr>
+<tr>
+<td>?? feed</td>
+<td>spl04p4</td>
+<td>?? cable</td>
+<td>sr</td>
+</tr>
+<tr>
+<td>Kathys160 feed</td>
+<td>spl04p5</td>
+<td>?? cable</td>
+<td>sr</td>
+</tr>
+</tbody>
+</table>
+<h1 id="reference-docs">Reference Docs</h1>
+<ul>
+<li>sl network based on <a href="https://netstack.org/">https://netstack.org/</a> sl.lan model <a href="https://netstack.org/docs/lan/">https://netstack.org/docs/lan/</a></li>
+<li>ng.sl.lan network gateway <a href="https://netstack.org/docs/lan/network/tp-link/">https://netstack.org/docs/lan/network/tp-link/</a></li>
+<li>sg.sl.lan storage gateway <a href="https://netstack.org/docs/lan/storage/freenas/">https://netstack.org/docs/lan/storage/freenas/</a></li>
+<li>cg.sl.lan compute gateway <a href="https://netstack.org/docs/lan/compute/proxmox/nswin11vm">https://netstack.org/docs/lan/compute/proxmox/nswin11vm</a></li>
+</ul>
+<hr />
+<ul>
+<li>DHCP 192.168.0.100-199</li>
+<li>DNS 8.8.8.8</li>
+<li>GW 192.168.0.1 255.255.255.0</li>
+<li>SSID: TP-LINK_24 (18-A6-F7-31-9C-06)</li>
+<li>
+<p>SSID: TP-LINK_9C05_5G (18-A6-F7-31-9C-05)</p>
+</li>
+<li>
+<p>WAN</p>
+</li>
+</ul>
+<pre><code>18-A6-F7-31-9C-07
+IP Address: 24.216.208.251  Dynamic IP
+Subnet Mask:    255.255.248.0    
+Default Gateway:    24.216.208.1      
+DNS Server: 71.10.216.1 , 71.10.216.2
+</code></pre>
+<h2 id="port-forward">port forward</h2>
+<table>
+<thead>
+<tr>
+<th>External</th>
+<th>Internal</th>
+<th>IP</th>
+<th>detail</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>32400</td>
+<td>32400</td>
+<td>192.168.0.6</td>
+<td>slPlex on sg2</td>
+</tr>
+<tr>
+<td>32500</td>
+<td>32400</td>
+<td>192.168.0.9</td>
+<td>slDVR on slwin11</td>
+</tr>
+<tr>
+<td>32400</td>
+<td>32400</td>
+<td>192.168.0.23</td>
+<td>removed ~~gusHPlex~~ on gusHPLaptop</td>
+</tr>
+<tr>
+<td>2020</td>
+<td>22</td>
+<td>192.168.0.202</td>
+<td>cf-sg2 cattemp truenas</td>
+</tr>
+</tbody>
+</table>
+<p>MAC Res</p>
+<pre><code>ID  MAC Address Reserved IP Address Status  Modify
+1   84-EA-ED-A8-64-91   192.168.0.21    Enabled Modify Delete
+2   00-11-D9-38-0B-FC   192.168.0.22    Enabled Modify Delete
+3   00-23-8B-86-38-61   192.168.0.23    Enabled Modify Delete
+4   8C-49-62-0B-69-8C   192.168.0.24    Enabled Modify Delete
+5   00-11-D9-5F-47-82   192.168.0.11    Enabled Modify Delete
+6   00-11-D9-35-02-A8   192.168.0.12    Enabled Modify Delete
+7   00-18-DD-08-02-95   192.168.0.13    Enabled Modify Delete
+8   8C-49-62-0B-69-8D   192.168.0.14    Enabled Modify Delete
+9   00-11-D9-5F-47-83   192.168.0.15    Enabled Modify Delete
+10  7C-C3-A1-73-CC-A3   192.168.0.211   Enabled Modify Delete
+11  28-18-78-C7-FC-23   192.168.0.212   Enabled Modify Delete
+12  86-50-46-38-28-96   192.168.0.213   Enabled Modify Delete
+13  A4-08-01-60-57-35   192.168.0.214   Enabled Modify Delete
+14  A4-0E-2B-4C-EF-C7   192.168.0.29    Enabled Modify Delete
+15  10-C3-7B-46-0C-ED   192.168.0.201   Enabled Modify Delete
+16  00-15-5D-02-71-03   192.168.0.202   Enabled Modify Delete
+17  AC-74-B1-02-FB-CF   192.168.0.28    Enabled Modify Delete
+18  00-08-9B-E2-83-93   192.168.0.6 Enabled Modify Delete
+19  00-15-17-5B-F2-80   192.168.0.9 Enabled Modify Delete
+20  08-00-27-84-49-45   192.168.0.10    Enabled Modify Delete
+</code></pre>
+<p>DHCP </p>
+<pre><code>ID  Client Name MAC Address Assigned IP Lease Time
+1   android-4de9db6d80c2f04c    AC-D0-74-13-A8-78   192.168.0.110   01:03:48
+2   wlan0   CC-8C-BF-F6-79-29   192.168.0.100   01:19:17
+3   StevesRokuUltra 8C-49-62-0B-69-8D   192.168.0.14    Permanent
+4   TIVO-748000190569948    00-11-D9-35-02-A8   192.168.0.12    Permanent
+5   500-64dba0f5f089    64-DB-A0-F5-F0-89   192.168.0.101   01:37:15
+6   TIVO-8480001902B1749    00-11-D9-5F-47-82   192.168.0.11    Permanent
+7   TIVO-8480001902B1749    00-11-D9-5F-47-83   192.168.0.15    Permanent
+8   Unknown A4-08-01-60-57-35   192.168.0.214   Permanent
+9   BRW485AB64C63EF 48-5A-B6-4C-63-EF   192.168.0.122   01:19:37
+10  Unknown FE-24-B4-B0-5E-35   192.168.0.103   00:53:36
+11  Unknown C6-9A-1C-84-72-48   192.168.0.106   01:46:48
+12  Unknown 1A-64-1A-7E-00-3D   192.168.0.109   01:01:32
+13  catSurface  28-18-78-B7-BE-B7   192.168.0.107   01:57:15
+14  gusGram AC-74-B1-02-FB-CF   192.168.0.28    Permanent
+15  Portal-744CF7122AD3 A4-0E-2B-3C-A7-62   192.168.0.105   01:52:18
+16  sg2 00-08-9B-E2-83-93   192.168.0.6 Permanent
+17  cats-Mac-mini   3C-07-54-72-49-E2   192.168.0.104   01:00:47
+18  slwin11 00-15-17-5B-F2-80   192.168.0.9 01:21:47
+19  amazon-4f24e65ad    A0-02-DC-F7-1B-62   192.168.0.102   01:09:23
+20  Unknown 16-2F-4E-27-3D-1F   192.168.0.111   00:25:45
+21  gusHPLaptop 00-23-8B-86-38-61   192.168.0.23    Permanent
+22  Pixel-6a    4A-8C-7F-77-D9-02   192.168.0.112   01:11:06
+23  Pixel-6a    86-50-46-38-28-96   192.168.0.213   Permanent
+24  Portal-8B57B421F784 A4-0E-2B-4C-EF-C7   192.168.0.29    Permanent
+25  wlan0   A0-92-08-68-FC-EE   192.168.0.113   00:31:25
+26  LGwebOSTV   7C-1C-4E-5D-C5-F6   192.168.0.136   01:48:51
+</code></pre>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": ["search.highlight"], "search": "../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+    
+  </body>
+</html>

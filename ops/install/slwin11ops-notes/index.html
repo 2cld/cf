@@ -1,0 +1,1290 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="SL Home Lab Infrastructure Documentation">
+      
+      
+      
+        <link rel="canonical" href="https://sl.2cld.net/ops/install/slwin11ops-notes/">
+      
+      
+        <link rel="prev" href="../">
+      
+      
+        <link rel="next" href="../slwin11ops-hv-mg2-notes/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../../favicon.ico">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
+    
+    
+      
+        <title>slwin11ops - SL node</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.484c7ddc.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="slate" data-md-color-primary="blue-grey" data-md-color-accent="cyan">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#slwin11ops-notes" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../.." title="SL node" class="md-header__button md-logo" aria-label="SL node" data-md-component="logo">
+      
+  <img src="../../../favicon.ico" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            SL node
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              slwin11ops
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../.." title="SL node" class="md-nav__button md-logo" aria-label="SL node" data-md-component="logo">
+      
+  <img src="../../../favicon.ico" alt="logo">
+
+    </a>
+    SL node
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Documentation
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Documentation
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../docs/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Overview
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../docs/devices/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Devices
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../docs/services/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Services
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../docs/storage/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Storage
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Operations
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Operations
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Overview
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_3_2" id="__nav_3_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Install
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Install
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Overview
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    slwin11ops
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    slwin11ops
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#services-on-slwin11ops" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Services on slwin11ops
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Services on slwin11ops">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#remotes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Remotes
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#local-slwin11ops-dhcp-see-note-below" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        local slwin11ops (DHCP - see note below)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#docker" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        docker
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#maintenance-notes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        maintenance notes
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ipconfig-all-latest-from-ipconfig-all-run" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ipconfig /all (latest - from ipconfig /all run)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#zerotier-cli-status" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        zerotier-cli status
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#differences-to-confirm" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Differences to confirm
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../slwin11ops-hv-mg2-notes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    slwin11ops HV mg2
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../slwin11-notes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    slwin11
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../github-actions-workflow/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    GitHub Actions
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../backup/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Backup
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../rdp/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Remote
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#services-on-slwin11ops" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Services on slwin11ops
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Services on slwin11ops">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#remotes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Remotes
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#local-slwin11ops-dhcp-see-note-below" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        local slwin11ops (DHCP - see note below)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#docker" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        docker
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#maintenance-notes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        maintenance notes
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ipconfig-all-latest-from-ipconfig-all-run" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ipconfig /all (latest - from ipconfig /all run)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#zerotier-cli-status" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        zerotier-cli status
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#differences-to-confirm" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Differences to confirm
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<p><a href="https://github.com/2cld/sl/edit/main/ops/install/slwin11ops-notes.md">edit</a></p>
+<h1 id="slwin11ops-notes">slwin11ops notes</h1>
+<p>based on 
+- https://netstack.org/docs/lan/compute/workstation/nswin11-cg
+- https://github.com/JamesTurland/JimsGarage/tree/main</p>
+<h2 id="services-on-slwin11ops">Services on slwin11ops</h2>
+<h3 id="remotes">Remotes</h3>
+<ul>
+<li>zerotier <a href="https://my.zerotier.com/login">zt ghadmin 10.147.17.94</a> - ZeroTier v1.14.2 ONLINE</li>
+<li>google <a href="https://remotedesktop.google.com/access">remotedesktop slwin11ops</a></li>
+<li>E:\guscamp\RemoteDesktop\sl-zt-94-slwin11ops-ghadmin.rdp</li>
+</ul>
+<h3 id="local-slwin11ops-dhcp-see-note-below">local slwin11ops (DHCP - see note below)</h3>
+<blockquote>
+<p><strong>⚠ CONFIRM:</strong> LAN IP observed as both 192.168.0.143 and 192.168.0.141 on different dates.
+This machine uses DHCP (no static reservation). The IP will drift unless a MAC reservation
+is added on the router for MAC B0-83-FE-65-80-80.
+Recommend adding a DHCP reservation on 192.168.0.1 to lock this down.</p>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th>url</th>
+<th>local ui</th>
+<th>map</th>
+<th>wan ip</th>
+<th>zt</th>
+<th>dmz</th>
+<th><a href="https://one.dash.cloudflare.com/">cf</a> tunnel</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>spectrum lan gateway</td>
+<td><a href="http://192.168.1.1">192.168.1.1</a></td>
+<td>xx</td>
+<td>24.216.208.255</td>
+<td>xx</td>
+<td>xx</td>
+<td>xx</td>
+</tr>
+<tr>
+<td>local lan gateway</td>
+<td><a href="http://192.168.0.1">192.168.0.1</a></td>
+<td>xx</td>
+<td>24.216.208.255</td>
+<td>10.147.17.94</td>
+<td>xx</td>
+<td>xx</td>
+</tr>
+<tr>
+<td><a href="https://plex.tv">plex.tv</a></td>
+<td>local plex :32400</td>
+<td>xx</td>
+<td>24.216.208.255</td>
+<td>10.147.17.94</td>
+<td>xx</td>
+<td>xx</td>
+</tr>
+</tbody>
+</table>
+<h3 id="docker">docker</h3>
+<ul>
+<li>/home/ghadmin/docker/docker-compose</li>
+<li>\wsl.localhost\Ubuntu-24.04\home\ghadmin\docker\docker-compose</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>url</th>
+<th>wsl docker IP</th>
+<th>map</th>
+<th>lan ip</th>
+<th>zt</th>
+<th>dmz</th>
+<th><a href="https://one.dash.cloudflare.com/">cf</a> tunnel</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="https://traefik.2cld.com">traefik.2cld.com</a> <br/> <a href="http://tf.lan">tf.lan</a> or <a href="http://traefik.lan">traefik.lan</a></td>
+<td>172.31.46.229</td>
+<td>80:80<br/>443:443</td>
+<td>DHCP</td>
+<td>10.147.17.94</td>
+<td>xx</td>
+<td><a href="https://one.dash.cloudflare.com/">sl-2cld</a></td>
+</tr>
+<tr>
+<td><a href="https://portainer.2cld.com">portainer.2cld.com</a> <br/> <a href="http://pt.lan:9000">pt.lan:9000</a> or <a href="https://portainer.lan:9443">portainer.lan:9443</a></td>
+<td>172.31.46.229</td>
+<td>8000:8000<br/>9000:9000<br/>9443:9443</td>
+<td>DHCP</td>
+<td>10.147.17.94</td>
+<td>xx</td>
+<td><a href="https://one.dash.cloudflare.com/">sl-2cld</a></td>
+</tr>
+<tr>
+<td><a href="https://gitea.2cld.com">gitea.2cld.com</a></td>
+<td>172.31.46.229</td>
+<td>3000:3000</td>
+<td>DHCP</td>
+<td>10.147.17.94</td>
+<td>xx</td>
+<td><a href="https://one.dash.cloudflare.com/">sl-2cld</a></td>
+</tr>
+<tr>
+<td><a href="https://slcp.2cld.com">slcp.2cld.com</a></td>
+<td>172.31.46.229</td>
+<td>9090:9090</td>
+<td>DHCP</td>
+<td>10.147.17.94</td>
+<td>xx</td>
+<td><a href="https://one.dash.cloudflare.com/">sl-2cld</a></td>
+</tr>
+</tbody>
+</table>
+<h3 id="maintenance-notes">maintenance notes</h3>
+<ul>
+<li>ssh to gitea not setup</li>
+<li>https://wiki.archlinux.org/title/Gitea#Enable_SSH_Support</li>
+<li>ubuntu user of 24.04 wsl (need to look at install of wsl ubuntu)</li>
+<li>sudo apt-get install cockpit -y</li>
+</ul>
+<h3 id="ipconfig-all-latest-from-ipconfig-all-run">ipconfig /all (latest - from ipconfig /all run)</h3>
+<pre><code>Microsoft Windows [Version 10.0.26100.4351]
+(c) Microsoft Corporation. All rights reserved.
+
+C:\Users\ghadmin&gt;ipconfig /all
+Windows IP Configuration
+
+  Host Name . . . . . . . . . . . . : slwin11ops
+  Primary Dns Suffix . . . . . . . : 
+  Node Type . . . . . . . . . . . . : Hybrid
+  IP Routing Enabled. . . . . . . . : No
+  WINS Proxy Enabled. . . . . . . . : No
+
+Ethernet adapter vEthernet (ExternalHVwifi):
+  Media State . . . . . . . . . . . : Media disconnected
+  Description . . . . . . . . . . . : Hyper-V Virtual Ethernet Adapter #3
+  Physical Address. . . . . . . . . : 10-08-B1-64-7F-31
+
+Ethernet adapter vEthernet (InternalHV):
+  Description . . . . . . . . . . . : Hyper-V Virtual Ethernet Adapter #4
+  Physical Address. . . . . . . . . : 00-15-5D-09-BF-00
+  Autoconfiguration IPv4 Address. . : 169.254.164.115
+  Subnet Mask . . . . . . . . . . . : 255.255.0.0
+
+Ethernet adapter vEthernet (ExternalHVether):
+  Description . . . . . . . . . . . : Hyper-V Virtual Ethernet Adapter #2
+  Physical Address. . . . . . . . . : B0-83-FE-65-80-80
+  DHCP Enabled. . . . . . . . . . . : Yes
+  IPv4 Address. . . . . . . . . . . : 192.168.0.141(Preferred)
+  Subnet Mask . . . . . . . . . . . : 255.255.255.0
+  Default Gateway . . . . . . . . . : 192.168.0.1
+  DHCP Server . . . . . . . . . . . : 192.168.0.1
+  DNS Servers . . . . . . . . . . . : 1.1.1.1
+                                      1.0.0.1
+
+Ethernet adapter ZeroTier One [d5e5fb65371eb4a4]:
+  Description . . . . . . . . . . . : ZeroTier Virtual Port
+  Physical Address. . . . . . . . . : A6-47-3E-46-F9-EE
+  IPv4 Address. . . . . . . . . . . : 10.147.17.94(Preferred)
+  Subnet Mask . . . . . . . . . . . : 255.255.255.0
+
+Ethernet adapter vEthernet (Default Switch):
+  Description . . . . . . . . . . . : Hyper-V Virtual Ethernet Adapter
+  Physical Address. . . . . . . . . : 00-15-5D-BA-12-EE
+  IPv4 Address. . . . . . . . . . . : 172.31.16.1
+  Subnet Mask . . . . . . . . . . . : 255.255.240.0
+
+C:\Users\ghadmin&gt;
+</code></pre>
+<h3 id="zerotier-cli-status">zerotier-cli status</h3>
+<pre><code>PS C:\WINDOWS\system32&gt; zerotier-cli status
+200 info f320719c15 1.14.2 ONLINE
+PS C:\WINDOWS\system32&gt;
+</code></pre>
+<h3 id="differences-to-confirm">Differences to confirm</h3>
+<blockquote>
+<p><strong>⚠ CONFIRM the following differences between older and newer ipconfig runs:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Older run</th>
+<th>Newer run (/all)</th>
+<th>Action</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>LAN IP (ExternalHVether)</strong></td>
+<td>192.168.0.143</td>
+<td>192.168.0.141</td>
+<td>Add DHCP reservation on router</td>
+</tr>
+<tr>
+<td><strong>DNS Servers</strong></td>
+<td>not captured</td>
+<td>1.1.1.1, 1.0.0.1 (Cloudflare)</td>
+<td>Confirm intentional</td>
+</tr>
+<tr>
+<td><strong>Default Switch IP</strong></td>
+<td>172.21.240.1</td>
+<td>172.31.16.1</td>
+<td>Normal Hyper-V drift, no action</td>
+</tr>
+<tr>
+<td><strong>WSL adapter</strong></td>
+<td>172.31.32.1 present</td>
+<td>Not present</td>
+<td>Confirm WSL2 still running</td>
+</tr>
+<tr>
+<td><strong>ZeroTier IP</strong></td>
+<td>10.147.17.94</td>
+<td>10.147.17.94</td>
+<td>✅ Consistent</td>
+</tr>
+</tbody>
+</table>
+</blockquote>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../../..", "features": ["search.highlight"], "search": "../../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+    
+  </body>
+</html>
